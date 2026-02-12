@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>GIS with AI: A Practical Guide to Claude Code</title>
+  <meta name="description" content="A practical guide for GIS analysts getting started with AI-assisted coding using Claude Code." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="GIS with AI: A Practical Guide to Claude Code" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A practical guide for GIS analysts getting started with AI-assisted coding using Claude Code." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="GIS with AI: A Practical Guide to Claude Code" />
+  
+  <meta name="twitter:description" content="A practical guide for GIS analysts getting started with AI-assisted coding using Claude Code." />
+  
+
+<meta name="author" content="Joanna Wilkin" />
+
+
+<meta name="date" content="2026-02-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="introduction.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">GIS with AI: A Practical Guide to Claude Code</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Getting Started With Claude Code</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what-is-vibe-coding"><i class="fa fa-check"></i><b>1.1</b> What is Vibe Coding?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#how-can-we-use-vibe-coding-in-gis"><i class="fa fa-check"></i><b>1.2</b> How Can We Use Vibe Coding in GIS?</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#tips-and-tricks"><i class="fa fa-check"></i><b>1.3</b> Tips and Tricks</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#limitations"><i class="fa fa-check"></i><b>1.4</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html"><i class="fa fa-check"></i><b>2</b> Getting Started with Claude</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#downloading-claude-code"><i class="fa fa-check"></i><b>2.1</b> Downloading Claude Code</a></li>
+<li class="chapter" data-level="2.2" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#setting-up-an-account"><i class="fa fa-check"></i><b>2.2</b> Setting Up an Account</a></li>
+<li class="chapter" data-level="2.3" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#choosing-a-program"><i class="fa fa-check"></i><b>2.3</b> Choosing a Program</a></li>
+<li class="chapter" data-level="2.4" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#setting-up-folders-for-claude"><i class="fa fa-check"></i><b>2.4</b> Setting Up Folders for Claude</a></li>
+<li class="chapter" data-level="2.5" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#restricting-folders"><i class="fa fa-check"></i><b>2.5</b> Restricting Claude to Those Folders</a></li>
+<li class="chapter" data-level="2.6" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#why-a-folder-structure-template-is-a-good-idea"><i class="fa fa-check"></i><b>2.6</b> Why a Folder Structure Template is a Good Idea</a></li>
+<li class="chapter" data-level="2.7" data-path="getting-started-with-claude.html"><a href="getting-started-with-claude.html#setting-up-your-window"><i class="fa fa-check"></i><b>2.7</b> Setting Up Your Window</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="setting-up-git-for-your-projects.html"><a href="setting-up-git-for-your-projects.html"><i class="fa fa-check"></i><b>3</b> Setting Up Git for Your Projects</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="setting-up-git-for-your-projects.html"><a href="setting-up-git-for-your-projects.html#why-version-control-matters"><i class="fa fa-check"></i><b>3.1</b> Why Version Control Matters</a></li>
+<li class="chapter" data-level="3.2" data-path="setting-up-git-for-your-projects.html"><a href="setting-up-git-for-your-projects.html#git-with-github"><i class="fa fa-check"></i><b>3.2</b> Git with GitHub</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-git-for-your-projects.html"><a href="setting-up-git-for-your-projects.html#git-with-bitbucket"><i class="fa fa-check"></i><b>3.3</b> Git with Bitbucket</a></li>
+<li class="chapter" data-level="3.4" data-path="setting-up-git-for-your-projects.html"><a href="setting-up-git-for-your-projects.html#creating-your-first-repository"><i class="fa fa-check"></i><b>3.4</b> Creating Your First Repository</a></li>
+<li class="chapter" data-level="3.5" data-path="setting-up-git-for-your-projects.html"><a href="setting-up-git-for-your-projects.html#connecting-your-local-project-to-a-remote-repository"><i class="fa fa-check"></i><b>3.5</b> Connecting Your Local Project to a Remote Repository</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html"><i class="fa fa-check"></i><b>4</b> How to Work with Claude Code</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#good-practices"><i class="fa fa-check"></i><b>4.1</b> Good Practices</a></li>
+<li class="chapter" data-level="4.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#using-git-with-claude"><i class="fa fa-check"></i><b>4.2</b> Using Git with Claude</a></li>
+<li class="chapter" data-level="4.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#getting-claude-to-create-branches-and-commit"><i class="fa fa-check"></i><b>4.3</b> Getting Claude to Create Branches and Commit</a></li>
+<li class="chapter" data-level="4.4" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#live-examples"><i class="fa fa-check"></i><b>4.4</b> Live Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html"><i class="fa fa-check"></i><b>5</b> Limitations and Considerations</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html#what-claude-code-does-well"><i class="fa fa-check"></i><b>5.1</b> What Claude Code Does Well</a></li>
+<li class="chapter" data-level="5.2" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html#where-claude-code-struggles"><i class="fa fa-check"></i><b>5.2</b> Where Claude Code Struggles</a></li>
+<li class="chapter" data-level="5.3" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html#environmental-costs-of-ai"><i class="fa fa-check"></i><b>5.3</b> Environmental Costs of AI</a></li>
+<li class="chapter" data-level="5.4" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html#responsible-use"><i class="fa fa-check"></i><b>5.4</b> Responsible Use</a></li>
+</ul></li>
+<li class="part"><span><b>II Doing GIS with Claude Code</b></span></li>
+<li class="chapter" data-level="6" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html"><i class="fa fa-check"></i><b>6</b> Data Cleaning and Quality Assurance</a></li>
+<li class="chapter" data-level="7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>7</b> Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="8" data-path="methodology-development.html"><a href="methodology-development.html"><i class="fa fa-check"></i><b>8</b> Methodology Development</a></li>
+<li class="part"><span><b>III Deploying GIS Products with Claude Code</b></span></li>
+<li class="chapter" data-level="9" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>9</b> Deploying R Bookdown on Posit Connect Cloud</a></li>
+<li class="chapter" data-level="10" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>10</b> Deploying R Shiny Apps on Posit Connect Cloud</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jo-wilkin/gis-ai-manual" target="_blank">Source Code</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GIS with AI: A Practical Guide to Claude Code</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">GIS with AI: A Practical Guide to Claude Code</h1>
+<p class="author"><em>Joanna Wilkin</em></p>
+<p class="date"><em>2026-02-12</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered hasAnchor">
+<h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This guide is written for GIS analysts who have no prior experience with AI coding assistants. Whether you work in R, Python, or primarily use desktop GIS tools, this book will walk you through how to use Claude Code to accelerate your GIS workflows — from data cleaning to deploying interactive web applications.</p>
+<p>The guide is structured in three parts:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Getting Started With Claude Code</strong> — Setting up your environment, understanding how to work effectively with an AI coding assistant, and establishing good practices from day one.</p></li>
+<li><p><strong>Doing GIS With Claude Code</strong> — Practical workflows for common GIS tasks including data cleaning, exploratory analysis, and methodology development.</p></li>
+<li><p><strong>Deploying GIS Products With Claude Code</strong> — Taking your work from local scripts to published, shareable products using Posit Connect Cloud.</p></li>
+</ol>
+<p>No prior experience with AI tools is assumed. Each chapter includes step-by-step instructions, screenshots, and real-world examples from GIS projects.</p>
+
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": true,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
