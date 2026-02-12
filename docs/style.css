@@ -5,8 +5,18 @@
 
 /* ----------- Body and header text ---------------- */
 
+.book.font-family-0,
 .book.font-family-1 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.book .book-header,
+.book .book-summary {
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 h1, h2, h3, h4 {
