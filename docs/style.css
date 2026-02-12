@@ -1,17 +1,19 @@
-/* Custom styles for GIS AI Manual */
+/* Custom styles for GIS AI Manual — matching jo-wilkin.github.io */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
-/* ----------- Body and header text ---------------- */
+/* ----------- Body text ---------------- */
 
 .book.font-family-0,
 .book.font-family-1 {
-  font-family: 'Noto Sans', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal {
-  font-family: 'Noto Sans', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  color: #3b3b3b;
+  line-height: 1.6;
 }
 
 .book .book-header,
@@ -19,20 +21,48 @@
   font-family: 'Source Sans Pro', sans-serif !important;
 }
 
+/* ----------- Headings: Merriweather, normal weight ---------------- */
+
 h1, h2, h3, h4 {
-  color: #7ba1ad;
+  font-family: 'Merriweather', serif !important;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
 .title {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Merriweather', serif !important;
   font-size: 3em !important;
-  color: #608c99;
+  font-weight: 400;
+  color: #1a1a1a;
 }
 
 .subtitle {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #608c99;
+  color: #3b3b3b;
 }
+
+/* ----------- Links: burnt orange ---------------- */
+
+a {
+  color: #c05e2e;
+}
+
+a:hover {
+  color: #a04a1e;
+}
+
+/* ----------- Background ---------------- */
+
+.book .book-body {
+  background-color: #faf6f1;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  background-color: #faf6f1;
+}
+
+/* ----------- Captions and code ---------------- */
 
 p.caption {
   color: #777;
@@ -46,6 +76,9 @@ p code {
 pre {
   word-break: normal;
   word-wrap: normal;
+  background-color: #f4efe8;
+  border: 1px solid #e8e0d6;
+  border-radius: 3px;
 }
 
 pre code {
@@ -57,7 +90,7 @@ pre code {
 .summary > li:first-child {
   height: 50px;
   padding-top: 10px;
-  border-bottom: 1px solid rgba(0,0,0,.07);
+  border-bottom: 1px solid #e8e0d6;
 }
 
 .book .book-summary ul.summary li.divider {
@@ -74,98 +107,111 @@ pre code {
   margin-bottom: 0.85em;
 }
 
-/* ---- Sidebar div tips ---- */
+/* ---- Sidebar callout boxes — burnt orange palette ---- */
 
 div.puzzle, div.assignment, div.fyi, div.codetime, div.note, div.reading, div.sugreading, div.sds {
   padding: 1em;
   margin: 1em 0;
   min-height: 80px;
-  color: #1f5386;
+  color: #3b3b3b;
+  border-radius: 0 4px 4px 0;
 }
 
 div.puzzle {
-  background-color: #bed3ec;
+  background-color: #f4efe8;
+  border-left: 4px solid #c05e2e;
 }
 
 div.assignment {
-  border: solid 5px #7ba1ad;
+  border: solid 4px #c05e2e;
+  border-radius: 4px;
 }
 
 div.fyi {
-  background-color: #70db70;
+  background-color: #f4efe8;
+  border-left: 4px solid #c05e2e;
 }
 
 div.codetime {
-  background-color: #DEDEDE;
+  background-color: #f4efe8;
+  border-left: 4px solid #888;
 }
 
 div.note {
-  background-color: #FADA5E;
+  background-color: #fef9ee;
+  border-left: 4px solid #c05e2e;
 }
 
 div.reading {
-  border: solid 5px #bf68ab;
+  border: solid 4px #a04a1e;
+  border-radius: 4px;
 }
 
 /* Tip/Note/Warning boxes */
 
 .tip {
-  background-color: #e8f5e9;
-  border-left: 4px solid #2E7D32;
+  background-color: #f4efe8;
+  border-left: 4px solid #c05e2e;
   padding: 12px 16px;
   margin: 16px 0;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
 }
 
 .warning {
-  background-color: #fff8e1;
-  border-left: 4px solid #f57c00;
+  background-color: #fef9ee;
+  border-left: 4px solid #c05e2e;
   padding: 12px 16px;
   margin: 16px 0;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
 }
 
 .important {
   background-color: #fce4ec;
-  border-left: 4px solid #c62828;
+  border-left: 4px solid #a04a1e;
   padding: 12px 16px;
   margin: 16px 0;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
 }
 
-/* ---- TOC ---- */
+/* ---- TOC sidebar ---- */
 
 .book .book-summary {
-  background: white;
-  border-right: none;
+  background: #faf6f1;
+  border-right: 1px solid #e8e0d6;
 }
 
 .summary {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.summary a {
+  color: #3b3b3b !important;
+}
+
 .summary a:hover {
-  color: #b0ced8 !important;
+  color: #c05e2e !important;
 }
 
 .book .book-summary ul.summary li.active>a {
-  color: #b0ced8 !important;
+  color: #c05e2e !important;
   border-left: solid 4px;
-  border-color: #b0ced8;
+  border-color: #c05e2e;
   padding-left: 11px !important;
 }
 
 li.appendix span, li.part span {
   margin-top: 1em;
-  color: #1c3046 !important;
+  color: #1a1a1a !important;
   opacity: 1 !important;
   text-transform: uppercase;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
 }
 
 /* ---- Part headers ---- */
 
 .part {
-  color: #1c3046;
+  color: #1a1a1a;
 }
 
 /* ---- Image styling ---- */
@@ -173,5 +219,18 @@ li.appendix span, li.part span {
 img {
   max-width: 100%;
   border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Selection ---- */
+
+::selection {
+  background-color: #c05e2e;
+  color: #faf6f1;
+}
+
+/* ---- Strong text ---- */
+
+strong {
+  color: #1a1a1a;
 }
