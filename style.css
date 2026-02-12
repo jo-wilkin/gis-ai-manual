@@ -52,14 +52,15 @@ a:hover {
   color: #a04a1e;
 }
 
-/* ----------- Background ---------------- */
+/* ----------- Background: uniform beige everywhere ---------------- */
 
-.book .book-body {
-  background-color: #faf6f1;
-}
-
-.book .book-body .page-wrapper .page-inner {
-  background-color: #faf6f1;
+body,
+.book,
+.book .book-body,
+.book .book-body .page-wrapper,
+.book .book-body .page-wrapper .page-inner,
+.book .book-body .page-wrapper .page-inner section.normal {
+  background-color: #faf6f1 !important;
 }
 
 /* ----------- Captions and code ---------------- */
