@@ -8,7 +8,7 @@
 # Bookdown build artifacts
 _book/
 _bookdown_files/
-libs/
+/libs/
 
 # OS files
 .DS_Store
