@@ -1,0 +1,19 @@
+# (PART) Getting Started With Claude Code {-}
+
+# Introduction
+
+## What is Vibe Coding?
+
+*Content coming soon.*
+
+## How Can We Use Vibe Coding in GIS?
+
+*Content coming soon.*
+
+## Tips and Tricks
+
+*Content coming soon.*
+
+## Limitations
+
+*Content coming soon.*

@@ -1,0 +1,18 @@
+book_filename: "gis-ai-manual"
+output_dir: "docs"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files:
+  - index.Rmd
+  - 01-introduction.Rmd
+  - 02-getting-started-claude.Rmd
+  - 03-setting-up-git.Rmd
+  - 04-working-with-claude.Rmd
+  - 05-limitations.Rmd
+  - 06-data-cleaning-qa.Rmd
+  - 07-exploratory-data-analysis.Rmd
+  - 08-methodology-development.Rmd
+  - 09-deploy-bookdown.Rmd
+  - 10-deploy-shiny.Rmd

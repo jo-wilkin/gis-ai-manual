@@ -1,0 +1,22 @@
+---
+title: "GIS with AI: A Practical Guide to Claude Code"
+author: "Joanna Wilkin"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: "A practical guide for GIS analysts getting started with AI-assisted coding using Claude Code."
+---
+
+# Preface {-}
+
+This guide is written for GIS analysts who have no prior experience with AI coding assistants. Whether you work in R, Python, or primarily use desktop GIS tools, this book will walk you through how to use Claude Code to accelerate your GIS workflows — from data cleaning to deploying interactive web applications.
+
+The guide is structured in three parts:
+
+1. **Getting Started With Claude Code** — Setting up your environment, understanding how to work effectively with an AI coding assistant, and establishing good practices from day one.
+
+2. **Doing GIS With Claude Code** — Practical workflows for common GIS tasks including data cleaning, exploratory analysis, and methodology development.
+
+3. **Deploying GIS Products With Claude Code** — Taking your work from local scripts to published, shareable products using Posit Connect Cloud.
+
+No prior experience with AI tools is assumed. Each chapter includes step-by-step instructions, screenshots, and real-world examples from GIS projects.

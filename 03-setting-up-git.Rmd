@@ -1,0 +1,21 @@
+# Setting Up Git for Your Projects
+
+## Why Version Control Matters
+
+*Content coming soon.*
+
+## Git with GitHub
+
+*Content coming soon.*
+
+## Git with Bitbucket
+
+*Content coming soon.*
+
+## Creating Your First Repository
+
+*Content coming soon.*
+
+## Connecting Your Local Project to a Remote Repository
+
+*Content coming soon.*

@@ -1,0 +1,19 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">GIS with AI: A Practical Guide to Claude Code</a></li>
+      after: |
+        <li><a href="https://github.com/jo-wilkin/gis-ai-manual" target="_blank">Source Code</a></li>
+    download: null
+    sharing:
+      github: yes
+      facebook: no
+      twitter: no
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes

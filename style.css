@@ -1,0 +1,50 @@
+/* Custom styles for GIS AI Manual */
+
+/* Body text */
+p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Code blocks */
+pre {
+  border-left: 3px solid #2E7D32;
+  background-color: #f8f9fa;
+}
+
+/* Tip/Note boxes */
+.tip {
+  background-color: #e8f5e9;
+  border-left: 4px solid #2E7D32;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.warning {
+  background-color: #fff8e1;
+  border-left: 4px solid #f57c00;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.important {
+  background-color: #fce4ec;
+  border-left: 4px solid #c62828;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+/* Part headers */
+.part {
+  color: #1a5f31;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

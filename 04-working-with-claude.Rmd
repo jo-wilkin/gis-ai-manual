@@ -1,0 +1,17 @@
+# How to Work with Claude Code
+
+## Good Practices
+
+*Content coming soon.*
+
+## Using Git with Claude
+
+*Content coming soon.*
+
+## Getting Claude to Create Branches and Commit
+
+*Content coming soon.*
+
+## Live Examples {#live-examples}
+
+*Videos and walkthroughs of live coding sessions coming soon.*

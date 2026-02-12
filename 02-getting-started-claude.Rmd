@@ -1,0 +1,33 @@
+# Getting Started with Claude
+
+## Downloading Claude Code
+
+*Content coming soon.*
+
+## Setting Up an Account
+
+*Content coming soon.*
+
+## Choosing a Program
+
+*Content coming soon.*
+
+## Setting Up Folders for Claude
+
+*Content coming soon.*
+
+## Restricting Claude to Those Folders {#restricting-folders}
+
+::: {.important}
+**Why is this important?** Claude Code has access to read and modify files on your system. Restricting it to specific project folders prevents accidental changes to files outside your project. This is one of the most important setup steps.
+:::
+
+*Content coming soon.*
+
+## Why a Folder Structure Template is a Good Idea
+
+*Content coming soon.*
+
+## Setting Up Your Window
+
+*Content coming soon.*

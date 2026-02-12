@@ -1,0 +1,17 @@
+# Limitations and Considerations
+
+## What Claude Code Does Well
+
+*Content coming soon.*
+
+## Where Claude Code Struggles
+
+*Content coming soon.*
+
+## Environmental Costs of AI
+
+*Content coming soon.*
+
+## Responsible Use
+
+*Content coming soon.*
