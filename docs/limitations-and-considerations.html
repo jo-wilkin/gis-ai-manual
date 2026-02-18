@@ -23,7 +23,7 @@
 <meta name="author" content="Joanna Wilkin" />
 
 
-<meta name="date" content="2026-02-12" />
+<meta name="date" content="2026-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,71 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -105,9 +170,19 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html"><i class="fa fa-check"></i><b>4</b> How to Work with Claude Code</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#good-practices"><i class="fa fa-check"></i><b>4.1</b> Good Practices</a></li>
+<li class="chapter" data-level="4.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#good-practices"><i class="fa fa-check"></i><b>4.1</b> Good Practices</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#your-daily-workflow-a-cheat-sheet"><i class="fa fa-check"></i><b>4.1.1</b> Your Daily Workflow: A Cheat Sheet</a></li>
+<li class="chapter" data-level="4.1.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#step-by-step"><i class="fa fa-check"></i><b>4.1.2</b> Step by step</a></li>
+<li class="chapter" data-level="4.1.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#general-good-practices"><i class="fa fa-check"></i><b>4.1.3</b> General good practices</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#using-git-with-claude"><i class="fa fa-check"></i><b>4.2</b> Using Git with Claude</a></li>
-<li class="chapter" data-level="4.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#getting-claude-to-create-branches-and-commit"><i class="fa fa-check"></i><b>4.3</b> Getting Claude to Create Branches and Commit</a></li>
+<li class="chapter" data-level="4.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#getting-claude-to-create-branches-and-commit"><i class="fa fa-check"></i><b>4.3</b> Getting Claude to Create Branches and Commit</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#creating-branches"><i class="fa fa-check"></i><b>4.3.1</b> Creating branches</a></li>
+<li class="chapter" data-level="4.3.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#committing-changes"><i class="fa fa-check"></i><b>4.3.2</b> Committing changes</a></li>
+<li class="chapter" data-level="4.3.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#pushing-and-merging"><i class="fa fa-check"></i><b>4.3.3</b> Pushing and merging</a></li>
+</ul></li>
 <li class="chapter" data-level="4.4" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#live-examples"><i class="fa fa-check"></i><b>4.4</b> Live Examples</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html"><i class="fa fa-check"></i><b>5</b> Limitations and Considerations</a>
@@ -118,12 +193,62 @@
 <li class="chapter" data-level="5.4" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html#responsible-use"><i class="fa fa-check"></i><b>5.4</b> Responsible Use</a></li>
 </ul></li>
 <li class="part"><span><b>II Doing GIS with Claude Code</b></span></li>
-<li class="chapter" data-level="6" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html"><i class="fa fa-check"></i><b>6</b> Data Cleaning and Quality Assurance</a></li>
-<li class="chapter" data-level="7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>7</b> Exploratory Data Analysis</a></li>
-<li class="chapter" data-level="8" data-path="methodology-development.html"><a href="methodology-development.html"><i class="fa fa-check"></i><b>8</b> Methodology Development</a></li>
+<li class="chapter" data-level="6" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html"><i class="fa fa-check"></i><b>6</b> Data Cleaning and Quality Assurance</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#why-this-chapter-matters"><i class="fa fa-check"></i><b>6.1</b> Why This Chapter Matters</a></li>
+<li class="chapter" data-level="6.2" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#common-gis-data-cleaning-tasks"><i class="fa fa-check"></i><b>6.2</b> Common GIS Data Cleaning Tasks</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#geometry-validation-and-repair"><i class="fa fa-check"></i><b>6.2.1</b> Geometry validation and repair</a></li>
+<li class="chapter" data-level="6.2.2" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#crs-management"><i class="fa fa-check"></i><b>6.2.2</b> CRS management</a></li>
+<li class="chapter" data-level="6.2.3" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#attribute-cleaning"><i class="fa fa-check"></i><b>6.2.3</b> Attribute cleaning</a></li>
+<li class="chapter" data-level="6.2.4" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#joins-and-merges"><i class="fa fa-check"></i><b>6.2.4</b> Joins and merges</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#building-a-qa-checklist"><i class="fa fa-check"></i><b>6.3</b> Building a QA Checklist</a></li>
+<li class="chapter" data-level="6.4" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#things-to-watch-out-for"><i class="fa fa-check"></i><b>6.4</b> Things to Watch Out For</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>7</b> Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#statistical-summaries"><i class="fa fa-check"></i><b>7.1</b> Statistical Summaries</a></li>
+<li class="chapter" data-level="7.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#spatial-exploration"><i class="fa fa-check"></i><b>7.2</b> Spatial Exploration</a></li>
+<li class="chapter" data-level="7.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualisation-with-claude"><i class="fa fa-check"></i><b>7.3</b> Visualisation with Claude</a></li>
+<li class="chapter" data-level="7.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#structuring-your-eda"><i class="fa fa-check"></i><b>7.4</b> Structuring Your EDA</a></li>
+<li class="chapter" data-level="7.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#saving-your-eda-outputs"><i class="fa fa-check"></i><b>7.5</b> Saving Your EDA Outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="methodology-development.html"><a href="methodology-development.html"><i class="fa fa-check"></i><b>8</b> Methodology Development</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="methodology-development.html"><a href="methodology-development.html#using-claude-as-a-sounding-board"><i class="fa fa-check"></i><b>8.1</b> Using Claude as a Sounding Board</a></li>
+<li class="chapter" data-level="8.2" data-path="methodology-development.html"><a href="methodology-development.html#implementing-your-analysis"><i class="fa fa-check"></i><b>8.2</b> Implementing Your Analysis</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="methodology-development.html"><a href="methodology-development.html#spatial-analysis-workflows"><i class="fa fa-check"></i><b>8.2.1</b> Spatial analysis workflows</a></li>
+<li class="chapter" data-level="8.2.2" data-path="methodology-development.html"><a href="methodology-development.html#statistical-methods"><i class="fa fa-check"></i><b>8.2.2</b> Statistical methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="methodology-development.html"><a href="methodology-development.html#iterating-on-your-methodology"><i class="fa fa-check"></i><b>8.3</b> Iterating on Your Methodology</a></li>
+<li class="chapter" data-level="8.4" data-path="methodology-development.html"><a href="methodology-development.html#documenting-your-methodology"><i class="fa fa-check"></i><b>8.4</b> Documenting Your Methodology</a></li>
+</ul></li>
 <li class="part"><span><b>III Deploying GIS Products with Claude Code</b></span></li>
-<li class="chapter" data-level="9" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>9</b> Deploying R Bookdown on Posit Connect Cloud</a></li>
-<li class="chapter" data-level="10" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>10</b> Deploying R Shiny Apps on Posit Connect Cloud</a></li>
+<li class="chapter" data-level="9" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>9</b> Deploying R Bookdown on Posit Connect Cloud</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#what-is-bookdown"><i class="fa fa-check"></i><b>9.1</b> What is Bookdown?</a></li>
+<li class="chapter" data-level="9.2" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#what-is-posit-connect-cloud"><i class="fa fa-check"></i><b>9.2</b> What is Posit Connect Cloud?</a></li>
+<li class="chapter" data-level="9.3" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#setting-up-a-bookdown-project-with-claude"><i class="fa fa-check"></i><b>9.3</b> Setting Up a Bookdown Project with Claude</a></li>
+<li class="chapter" data-level="9.4" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#building-locally"><i class="fa fa-check"></i><b>9.4</b> Building Locally</a></li>
+<li class="chapter" data-level="9.5" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#deploying-to-posit-connect-cloud"><i class="fa fa-check"></i><b>9.5</b> Deploying to Posit Connect Cloud</a></li>
+<li class="chapter" data-level="9.6" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#updating-your-deployed-document"><i class="fa fa-check"></i><b>9.6</b> Updating Your Deployed Document</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>10</b> Deploying R Shiny Apps on Posit Connect Cloud</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#what-is-shiny"><i class="fa fa-check"></i><b>10.1</b> What is Shiny?</a></li>
+<li class="chapter" data-level="10.2" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#building-a-gis-shiny-app-with-claude"><i class="fa fa-check"></i><b>10.2</b> Building a GIS Shiny App with Claude</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#getting-started"><i class="fa fa-check"></i><b>10.2.1</b> Getting started</a></li>
+<li class="chapter" data-level="10.2.2" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#adding-interactivity"><i class="fa fa-check"></i><b>10.2.2</b> Adding interactivity</a></li>
+<li class="chapter" data-level="10.2.3" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#styling"><i class="fa fa-check"></i><b>10.2.3</b> Styling</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#testing-locally"><i class="fa fa-check"></i><b>10.3</b> Testing Locally</a></li>
+<li class="chapter" data-level="10.4" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#deploying-to-posit-connect-cloud-1"><i class="fa fa-check"></i><b>10.4</b> Deploying to Posit Connect Cloud</a></li>
+<li class="chapter" data-level="10.5" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#common-deployment-issues"><i class="fa fa-check"></i><b>10.5</b> Common Deployment Issues</a></li>
+<li class="chapter" data-level="10.6" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#updating-your-app"><i class="fa fa-check"></i><b>10.6</b> Updating Your App</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/jo-wilkin/gis-ai-manual" target="_blank">Source Code</a></li>
 
@@ -146,21 +271,61 @@
             <section class="normal" id="section-">
 <div id="limitations-and-considerations" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Limitations and Considerations<a href="limitations-and-considerations.html#limitations-and-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We touched on limitations briefly in Chapter 1, but this chapter goes deeper. Understanding where Claude Code excels and where it falls short will save you time, frustration, and — importantly — help you avoid producing incorrect results. Honest reflection on these tools is part of using them responsibly.</p>
 <div id="what-claude-code-does-well" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> What Claude Code Does Well<a href="limitations-and-considerations.html#what-claude-code-does-well" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<p>Let’s start with the positives. Claude Code genuinely accelerates GIS work in these areas:</p>
+<ul>
+<li><strong>Boilerplate code.</strong> Loading libraries, reading data, setting up project structures, writing standard cleaning pipelines — Claude does this faster than you can type it.</li>
+<li><strong>Translating between languages.</strong> Need your R workflow in Python, or vice versa? Claude handles these translations well, preserving the logic while adapting to language-specific conventions.</li>
+<li><strong>Explaining code.</strong> Inherited a colleague’s undocumented script? Paste it in and ask Claude to explain what each section does. This is one of its strongest use cases.</li>
+<li><strong>Debugging.</strong> Paste an error message and the relevant code, and Claude will often identify the issue and suggest a fix immediately.</li>
+<li><strong>Writing documentation.</strong> README files, code comments, function docstrings, metadata templates — Claude produces these quickly and consistently.</li>
+<li><strong>Repetitive transformations.</strong> Renaming columns across multiple datasets, standardising date formats, converting CRS for a batch of files — tedious work that Claude handles reliably.</li>
+<li><strong>Generating visualisations.</strong> Quick exploratory plots, ggplot2 themes, Leaflet maps — Claude can scaffold these rapidly, letting you focus on interpretation rather than syntax.</li>
+</ul>
 </div>
 <div id="where-claude-code-struggles" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Where Claude Code Struggles<a href="limitations-and-considerations.html#where-claude-code-struggles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<p>These are the areas where you need to be most vigilant:</p>
+<ul>
+<li><strong>Domain-specific spatial logic.</strong> Claude doesn’t understand <em>why</em> you’d use a 50-metre buffer versus a 100-metre buffer, or why a particular spatial join needs to be a left join. It can write the code, but the analytical decisions are yours.</li>
+<li><strong>Complex geoprocessing chains.</strong> Operations that involve multiple sequential spatial transformations — dissolve, then buffer, then intersect, then aggregate — sometimes produce subtly wrong results. Always validate the output geometry.</li>
+<li><strong>CRS and projection issues.</strong> Claude generally knows common EPSG codes, but it can get confused with less common or custom projections. Always verify that transformations are correct.</li>
+<li><strong>Large raster operations.</strong> Claude may suggest approaches that load entire rasters into memory. For large Earth observation datasets, you’ll need to guide it toward tile-based or out-of-core processing.</li>
+<li><strong>Topology and network analysis.</strong> These are areas where spatial relationships are complex and errors are hard to spot visually. Extra validation is essential.</li>
+<li><strong>Keeping up with package changes.</strong> Claude’s training data has a cutoff. If a package has recently changed its API (as <code>terra</code> and <code>sf</code> occasionally do), Claude may suggest deprecated syntax.</li>
+<li><strong>Understanding your specific data.</strong> Claude doesn’t know that ward boundaries changed in the 2023 revision, or that your organisation uses a custom classification scheme. You need to provide this context explicitly.</li>
+</ul>
 </div>
 <div id="environmental-costs-of-ai" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Environmental Costs of AI<a href="limitations-and-considerations.html#environmental-costs-of-ai" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<p>It would be irresponsible to write a guide encouraging AI use without acknowledging the environmental footprint:</p>
+<ul>
+<li><strong>AI models require significant energy to run.</strong> Each query to Claude Code consumes computational resources in data centres powered by electricity.</li>
+<li><strong>The scale matters.</strong> A single query is negligible, but heavy daily use across thousands of users adds up. This is an active area of concern and research in the AI industry.</li>
+<li><strong>How to think about it practically:</strong>
+<ul>
+<li>Use Claude Code purposefully, not as a chatbot. Have a clear task before you start a session.</li>
+<li>Avoid repetitive, unnecessary queries. If Claude gave you a good answer, save it rather than asking again.</li>
+<li>Batch your work. Rather than starting and stopping sessions throughout the day, consolidate your Claude Code work into focused blocks.</li>
+</ul></li>
+<li><strong>Context for GIS professionals.</strong> Many of us already work with computationally intensive processes — running spatial models, processing satellite imagery, rendering 3D visualisations. AI-assisted coding is an additional energy cost, but it may also <em>reduce</em> total computation by helping you write more efficient code on the first attempt.</li>
+<li><strong>Stay informed.</strong> Anthropic (the company behind Claude) publishes information about their sustainability efforts. As the field evolves, the energy efficiency of these models is improving.</li>
+</ul>
+<p>This isn’t a reason to avoid using Claude Code, but it is a reason to use it thoughtfully.</p>
 </div>
 <div id="responsible-use" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Responsible Use<a href="limitations-and-considerations.html#responsible-use" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<p>Using AI in your professional work comes with responsibilities beyond the technical:</p>
+<ul>
+<li><strong>Don’t present AI-generated code as entirely your own work</strong> in contexts where that matters (academic submissions, certifications, job interviews). Be transparent about your tools.</li>
+<li><strong>Validate outputs.</strong> This applies to any tool, but it’s especially important with AI. If Claude writes an analysis that produces a number, check that number against your expectations and, where possible, against an independent calculation.</li>
+<li><strong>Be careful with sensitive data.</strong> Claude Code processes your prompts and code. Don’t paste confidential data, personal information, or sensitive organisational details into your prompts unless your organisation’s data policy permits it.</li>
+<li><strong>Credit appropriately.</strong> If Claude Code significantly contributed to a piece of work — particularly in research or published outputs — consider acknowledging it, just as you would any other tool or collaborator.</li>
+<li><strong>Maintain your skills.</strong> It’s tempting to let Claude do everything, but actively understanding the code it produces will keep your skills sharp. Use Claude as a learning tool, not a crutch.</li>
+<li><strong>Stay critical.</strong> Just because Claude says something confidently doesn’t mean it’s correct. This applies to code, explanations, and especially to statistical or methodological advice. Your training and experience are the final quality check.</li>
+</ul>
 
 </div>
 </div>

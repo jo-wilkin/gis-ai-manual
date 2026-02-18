@@ -1,3 +1,52 @@
 # Methodology Development
 
-*Content coming soon.*
+This is where your GIS expertise matters most. Methodology development — choosing and implementing the analytical approach for your project — is the stage where Claude Code shifts from leading to supporting. You decide the method; Claude helps you implement it.
+
+That said, Claude can be a surprisingly useful sounding board during the design phase, and it can dramatically speed up the implementation once you've settled on an approach.
+
+## Using Claude as a Sounding Board
+
+Before writing any code, you can discuss your analytical approach with Claude:
+
+- **Describe your research question:** *"I want to identify areas of London that are underserved by green space, accounting for population density and distance to the nearest park. What spatial analysis approaches would you suggest?"*
+- **Compare methods:** *"What are the trade-offs between using kernel density estimation versus a grid-based accessibility analysis for this problem?"*
+- **Check feasibility:** *"I have ward-level population data and point locations for all parks. Is it feasible to run a network-based accessibility analysis, or should I use Euclidean buffers?"*
+
+Take Claude's methodological suggestions as starting points, not gospel. It draws on general knowledge and may not be aware of the latest developments in your specific subfield. Cross-reference with your own expertise and published literature.
+
+## Implementing Your Analysis
+
+Once you've decided on an approach, Claude can help you build it step by step:
+
+### Spatial analysis workflows
+
+- **Buffer analysis:** *"Create 400m, 800m, and 1200m buffers around each park and calculate the population within each buffer zone."*
+- **Spatial interpolation:** *"Use inverse distance weighting to interpolate air quality measurements across the study area. Use a grid resolution of 100m."*
+- **Overlay analysis:** *"Intersect the flood risk zones with the residential land use polygons and calculate the area of residential land at risk."*
+- **Accessibility modelling:** *"Calculate the straight-line distance from each population-weighted centroid to the nearest park."*
+
+### Statistical methods
+
+- **Regression:** *"Run an OLS regression with green space percentage as the dependent variable and deprivation score, population density, and distance to centre as predictors."*
+- **Spatial regression:** *"The OLS residuals are spatially autocorrelated. Fit a spatial lag model instead using the spdep package."*
+- **Classification:** *"Use k-means clustering on the standardised socioeconomic variables to identify neighbourhood typologies."*
+- **Significance testing:** *"Run a chi-squared test to check whether the distribution of land use types differs significantly between inner and outer boroughs."*
+
+## Iterating on Your Methodology
+
+Real analysis is rarely linear. You'll run something, look at the results, and adjust. Claude Code makes this iteration fast:
+
+- **Sensitivity testing:** *"Re-run the buffer analysis with 500m and 1000m buffers instead, and compare the results."*
+- **Trying alternative specifications:** *"Add an interaction term between deprivation and distance to centre in the regression."*
+- **Validating results:** *"Split the data 70/30 and check how well the model performs on the held-out set."*
+- **Comparing approaches:** *"Run both the IDW and kriging interpolation and create a difference map showing where they disagree."*
+
+## Documenting Your Methodology
+
+This is often the most neglected part of a GIS project, and one of the most valuable things Claude can help with:
+
+- **Method documentation:** *"Write a methods section describing the accessibility analysis we just ran, suitable for a technical report."*
+- **Parameter justification:** *"Document the key parameters we chose (buffer distances, grid resolution, weight function) and the rationale for each."*
+- **Reproducibility notes:** *"Generate a markdown file listing every analytical step, the input data, the parameters used, and the output produced."*
+
+Getting Claude to document as you go is far easier than trying to reconstruct your methodology after the fact. Make it part of your workflow, not an afterthought.

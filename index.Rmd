@@ -1,10 +1,11 @@
 ---
-title: "GIS with AI: A Practical Guide to Claude Code"
-author: "Joanna Wilkin"
+title: 'GIS with AI: A Practical Guide to Claude Code'
+author: "Dr Jo Wilkin & Claude"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-description: "A practical guide for GIS analysts getting started with AI-assisted coding using Claude Code."
+description: "A practical guide for GIS analysts getting started with AI-assisted
+  coding using Claude Code."
 ---
 
 # Preface {-}
@@ -20,3 +21,15 @@ The guide is structured in three parts:
 3. **Deploying GIS Products With Claude Code** — Taking your work from local scripts to published, shareable products using Posit Connect Cloud.
 
 No prior experience with AI tools is assumed. Each chapter includes step-by-step instructions, screenshots, and real-world examples from GIS projects.
+
+**Who Wrote This and Why?**
+
+It shouldn't surprise you that a book that talks about generating code and content from using a tool such as Claude has primarily been written (let's say 80%) by said tool. **But** that doesn't go for saying that I, Jo, didn't have a hand in this and even this short section is fully human written - no Claude here!
+
+I have always enjoyed writing and furthermore enjoyed teaching - bring them together has been one of my favourite things to do! You can check out one of my previous Bookdown projects where I authored over the course of four months a brand new ["Geocomputation" course](https://jo-wilkin.github.io/GEOG0030/coursebook/) with new tutorials and datasets (in 2020!) for when I was teaching as a Lecturer at University College London. I sunk my heart and soul into that project, everything from the content to the aesthetics were bespoke. I wrote the module during the height of the pandemic, during a time I was navigating the loss of a close family member, and where I had little support to develop the content but huge pressure (naturally!) from students to deliver an effective remote teaching course. Since, the module has been forked, replicated, and reproduced, with just a small byline of credit. All those hours, and woosh, it's out in the wild with little control on how it's been used. Perhaps a 'CC BY' license wasn't the best way forward - or I should have written a book! Oh well!
+
+So when it came to thinking about bringing this manual alive, why would I not use the very tool it is highlighting. Claude is an incredible advancement to my workflow on helping me bringing **my ideas** to life, without getting stuck in the nitty gritty of setting up bookdowns, figuring out structures, and even writing the more mundane content. It has saved me an inordinate amount of time to focus on what I wanted to provide others in this area who have an interest in AI for their workflows. The idea for this manual is **100% mine**, the chapters, structure, and suggested content as well. 
+
+As with any tool, Claude has its limitations though, which it does explain quite clearly - and that I've added to. Furthermore, our Chapters in Section 3 are primarily written by me due to Claude's current lack of knowledge about the new Posit Cloud Connect Environment. So it's not perfect. I'm hoping to add some content, via a blog, on how I see Claude helping particularly in the Spatial Data Science space in democratizing programming knowledge that often it 'gatekeeped' away from those setting out to learn.
+
+Anyway, for now, I hope I have provided a useful tool for those getting set up in this new venture into AI for (spatial) data science. More to come, I've just got to get Claude to remind me I've made this promise every few days!

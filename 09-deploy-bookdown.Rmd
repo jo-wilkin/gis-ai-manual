@@ -2,4 +2,80 @@
 
 # Deploying R Bookdown on Posit Connect Cloud
 
-*Content coming soon.*
+You've done the analysis. You've got clean data, solid results, and a collection of scripts that do exactly what you need. Now what? For many GIS projects, the answer is: make it accessible to others. This chapter covers deploying an R Bookdown document — like a technical report, methodology guide, or data documentation — to Posit Connect Cloud so anyone with the link can read it.
+
+If this sounds like a big jump from writing R scripts, don't worry. Claude Code handles most of the configuration, and Posit Connect Cloud takes care of the hosting.
+
+## What is Bookdown?
+
+- **Bookdown is an R package** that turns a collection of R Markdown files into a structured, navigable book — as HTML, PDF, or both.
+- **You're reading one right now.** This guide is built with Bookdown.
+- **It's ideal for GIS documentation** — technical reports, methodology documents, data dictionaries, and training materials that combine text, code, and figures.
+- **Each chapter is a separate `.Rmd` file**, which keeps things manageable and makes collaboration easier.
+
+## What is Posit Connect Cloud?
+
+- **Posit Connect Cloud** (formerly RStudio Connect Cloud) is a hosting platform for R and Python content — Shiny apps, Bookdown documents, Quarto sites, and more.
+- **Free tier available.** You can publish up to 5 pieces of content for free, which is plenty for most individual projects.
+- **No server management.** You publish from your machine; Posit handles the hosting, rendering, and access control.
+- **Shareable via URL.** Once published, anyone with the link can access your document — useful for sharing results with stakeholders who don't use R.
+
+## Setting Up a Bookdown Project with Claude
+
+Ask Claude to scaffold the project structure for you:
+
+> *"Create a Bookdown project structure for a technical report on our green space accessibility analysis. Include an index file, three content chapters, a references file, and the necessary configuration files."*
+
+Claude will generate:
+
+- `index.Rmd` — the title page and preface
+- `01-data.Rmd`, `02-methods.Rmd`, `03-results.Rmd` — your content chapters
+- `_bookdown.yml` — configuration for chapter ordering and output
+- `_output.yml` — output format settings
+- `style.css` — optional custom styling
+
+## Building Locally
+
+Before deploying, build the book on your machine to check everything renders correctly:
+
+> *"Build the bookdown site and open it in the browser."*
+
+Claude will run:
+```r
+bookdown::render_book("index.Rmd", "bookdown::gitbook")
+```
+
+Check the output in your browser. Look for:
+
+- Do all chapters appear in the table of contents?
+- Do figures and maps render correctly?
+- Are code chunks displaying as intended (or hidden, if that's what you want)?
+- Do cross-references and links work?
+
+## Deploying to Posit Connect Cloud
+
+1. **Create a Posit Connect Cloud account** at [connect.posit.cloud](https://connect.posit.cloud) if you don't have one.
+
+2. **Install the rsconnect package** if needed:
+```r
+install.packages("rsconnect")
+```
+
+3. **Configure your account** — Posit Connect Cloud will give you an API key. Ask Claude:
+> *"Help me configure rsconnect to publish to Posit Connect Cloud."*
+
+4. **Publish:**
+> *"Deploy this bookdown project to Posit Connect Cloud."*
+
+Claude will guide you through the `rsconnect::deployDoc()` or `rsconnect::deploySite()` process, handling the configuration details.
+
+## Updating Your Deployed Document
+
+One of the best things about this workflow: updating is trivial.
+
+- Make your changes locally (ideally on a branch, as per Chapter 4).
+- Rebuild the book.
+- Re-deploy with the same command — it updates the existing publication rather than creating a new one.
+- **Ask Claude:** *"Rebuild the bookdown site and redeploy to Posit Connect Cloud."*
+
+Your URL stays the same, so anyone who has the link will see the latest version.

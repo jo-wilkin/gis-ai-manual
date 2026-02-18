@@ -1,21 +1,115 @@
 # Setting Up Git for Your Projects
 
+If you've ever lost work because you saved over the wrong file, or spent time trying to figure out which version of a script actually produced your final output, version control is about to become your best friend. This chapter introduces Git — the tool that tracks every change you make — and shows you how to connect it to a remote platform so your work is backed up and shareable.
+
+This matters even more when working with Claude Code, because Claude makes changes fast. Git gives you the safety net to roll back if something goes wrong.
+
 ## Why Version Control Matters
 
-*Content coming soon.*
+- **It's an undo button for your entire project.** Every commit is a snapshot you can return to. If Claude makes a change you don't like, you can revert it in seconds.
+- **It tracks *what* changed and *when*.** Instead of comparing `script_v1.R` and `script_v2.R` by eye, Git shows you exactly which lines were added, removed, or modified.
+- **It enables collaboration.** If you work in a team, Git prevents the classic "who edited this last?" confusion. Every change is attributed to a person (or, in our case, to you working with Claude).
+- **It's the standard.** Whether you're working in R, Python, or any other language, version control with Git is an industry expectation. If you haven't used it before, now is an excellent time to start.
+
+For GIS analysts specifically, Git tracks your *code and configuration* — not your data files (which are usually too large). We'll cover how to handle that distinction shortly.
 
 ## Git with GitHub
 
-*Content coming soon.*
+GitHub is the most widely used platform for hosting Git repositories. It's free for public and private repositories.
+
+- **Create a GitHub account** at [github.com](https://github.com) if you don't already have one.
+- **GitHub provides a web interface** for browsing your code, reviewing changes, and managing projects — but the real work happens through Git commands in your terminal.
+- **GitHub is particularly well-integrated with Claude Code.** Claude can create branches, commit changes, and even open pull requests directly through GitHub's CLI (`gh`).
+- **For GIS projects**, GitHub also supports rendering GeoJSON files directly in the browser, which can be handy for quick visual checks.
 
 ## Git with Bitbucket
 
-*Content coming soon.*
+If your organisation uses Atlassian products, you may be working with Bitbucket instead of GitHub. The Git fundamentals are identical — only the hosting platform differs.
+
+- **Bitbucket integrates with Jira and Confluence**, which may already be part of your team's workflow.
+- **The setup process is similar** — create an account, generate SSH keys or use HTTPS authentication, and connect your local repository to the remote.
+- **Claude Code works with Bitbucket repositories** in the same way it works with GitHub. The Git commands are identical; only the remote URL changes.
+
+Everything in this guide that references GitHub applies equally to Bitbucket unless otherwise noted.
 
 ## Creating Your First Repository
 
-*Content coming soon.*
+Let's create a repository for a GIS project from scratch:
+
+1. **Create a project folder** on your machine with the structure we discussed in Chapter 2:
+
+```bash
+mkdir ~/projects/my-gis-project
+cd ~/projects/my-gis-project
+```
+
+2. **Initialise Git** in that folder:
+
+```bash
+git init
+```
+
+3. **Create a `.gitignore` file.** This tells Git which files to *not* track. For GIS projects, you'll want to exclude large data files:
+
+```
+# Data files (too large for Git)
+*.shp
+*.dbf
+*.shx
+*.prj
+*.gpkg
+*.tif
+*.tiff
+*.geojson
+data/raw/
+data/processed/
+
+# R-specific
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python-specific
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+```
+
+4. **Make your first commit:**
+
+```bash
+git add .
+git commit -m "Initial project structure"
+```
+
+The key principle: **commit your code, not your data.** Large spatial datasets don't belong in Git. Use shared drives, cloud storage, or dedicated data management tools for those.
 
 ## Connecting Your Local Project to a Remote Repository
 
-*Content coming soon.*
+Once you've initialised Git locally, you'll want to connect it to GitHub (or Bitbucket) so your work is backed up and accessible from other machines.
+
+1. **Create a new repository on GitHub** — go to github.com, click "New repository", give it a name, and *don't* initialise it with a README (you already have local content).
+
+2. **Connect your local repo to the remote:**
+
+```bash
+git remote add origin https://github.com/yourusername/my-gis-project.git
+git branch -M main
+git push -u origin main
+```
+
+3. **Verify the connection:**
+
+```bash
+git remote -v
+```
+
+You should see your GitHub URL listed for both fetch and push.
+
+- **SSH vs HTTPS.** If you'll be pushing frequently, setting up SSH keys avoids having to enter your password each time. GitHub has [clear instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for this.
+- **Private repositories** are free on GitHub and Bitbucket. Use them for work projects or anything containing sensitive information.
+- **This only needs to be done once per project.** After the initial setup, you'll just be committing and pushing as part of your regular workflow — which is exactly what Chapter 4 covers.

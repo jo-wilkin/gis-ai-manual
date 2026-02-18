@@ -1,17 +1,187 @@
 # How to Work with Claude Code
 
+This is the chapter you'll probably come back to most often. It covers the day-to-day practices that make the difference between a frustrating session and a productive one — including a workflow you can follow every single morning.
+
 ## Good Practices
 
-*Content coming soon.*
+### Your Daily Workflow: A Cheat Sheet
+
+Before we get into the detail, here's the workflow we recommend every time you sit down to work with Claude Code. Think of it as your morning routine — once it becomes habit, you won't think twice about it.
+
+*Your daily workflow with Claude Code. Start each session by creating a branch, do your work in small committed chunks, and merge when you're happy.*
+
+```
+ ┌─────────────────────────────┐
+ │  Open terminal in your      │
+ │  project folder             │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Launch Claude Code         │
+ │  (type: claude)             │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Create a new branch        │
+ │  "Create a branch called    │
+ │   feature/clean-boundaries" │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Do your work               │◄──────────┐
+ │  in small steps             │           │
+ └──────────────┬──────────────┘           │
+                │                          │
+                ▼                          │
+ ┌─────────────────────────────┐           │
+ │  Review changes             │           │
+ │  "Show me a git diff"       │           │
+ └──────────────┬──────────────┘           │
+                │                          │
+                ▼                          │
+ ┌─────────────────────────────┐           │
+ │  Commit frequently          │           │
+ │  "Commit this with a        │           │
+ │   meaningful message"       │           │
+ └──────────────┬──────────────┘           │
+                │                          │
+                ▼                          │
+           ┌─────────┐    Yes              │
+           │  More   ├────────────────────┘
+           │  work?  │
+           └────┬────┘
+                │ No
+                ▼
+ ┌─────────────────────────────┐
+ │  Push your branch           │
+ │  "Push this branch          │
+ │   to origin"                │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Open a pull request        │
+ │  or merge locally           │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  ✓  Done for the day        │
+ └─────────────────────────────┘
+```
+
+**The golden rule: never work directly on `main`.** Always create a branch, do your work there, and merge back when you're satisfied. This way, if Claude leads you down a path you don't like, you can simply delete the branch and start fresh. No harm done.
+
+### Step by step
+
+Here's what each stage looks like in practice:
+
+1. **Open your terminal and navigate to your project folder:**
+```bash
+cd ~/projects/my-gis-project
+claude
+```
+
+2. **Create a branch for today's work.** Tell Claude:
+> *"Create a new branch called feature/add-boundary-cleaning"*
+
+3. **Work in small, reviewable chunks.** Instead of asking Claude to write an entire pipeline, ask for one step at a time:
+> *"Read in the boundary shapefile from data/raw/ and check for invalid geometries"*
+
+4. **Review what Claude has done.** After each step, ask:
+> *"Show me a git diff of what's changed"*
+
+5. **Commit when you're happy with a piece of work:**
+> *"Commit these changes with the message 'Add boundary geometry validation'"*
+
+6. **Repeat steps 3–5** until you've finished your task for the day.
+
+7. **Push your branch** when you're done:
+> *"Push this branch to origin"*
+
+8. **Merge or open a pull request** once you're confident the work is complete.
+
+### General good practices
+
+Beyond the daily workflow, keep these principles in mind:
+
+- **Start each session with context.** Remind Claude what you're working on: *"I'm continuing work on the land use classification analysis. We're in the feature/land-use branch."*
+- **Use `CLAUDE.md` for persistent context.** Put your project preferences, data descriptions, and coding standards in a `CLAUDE.md` file at the root of your project. Claude reads this automatically at the start of every session. Example:
+
+```markdown
+# Project: London Green Space Analysis
+
+## Language & packages
+- R with sf, dplyr, ggplot2, terra
+- Always use pipe operator |>
+- Use British English in comments
+
+## Data
+- Raw data in data/raw/ (do not modify)
+- All outputs go to data/output/
+- CRS: EPSG:27700 (British National Grid)
+
+## Conventions
+- Script names: 01-clean.R, 02-analyse.R, etc.
+- Always include a header comment in scripts
+```
+
+- **Ask Claude to explain its choices.** If it suggests an approach you're not familiar with, ask *"Why did you use st_make_valid() here instead of st_buffer(0)?"* You'll learn faster this way.
+- **Don't let sessions run too long.** Claude Code sessions accumulate context. If you've been working for a while and responses start feeling less sharp, start a fresh session.
 
 ## Using Git with Claude
 
-*Content coming soon.*
+Claude Code has built-in awareness of Git. You don't need to switch to a separate terminal for version control — Claude can handle it directly.
+
+- **Checking status:** Ask *"What's the current git status?"* and Claude will show you tracked, untracked, and modified files.
+- **Viewing changes:** *"Show me the diff"* gives you a clear view of what's changed since the last commit.
+- **Switching branches:** *"Switch to the main branch"* or *"Checkout the feature/analysis branch"*.
+- **Viewing history:** *"Show me the last 5 commits"* to understand where you left off.
+
+The advantage of doing Git through Claude is that it can *explain* what it sees. Instead of parsing a raw diff yourself, you can ask: *"Summarise the changes I've made since the last commit"* and get a plain-English description.
 
 ## Getting Claude to Create Branches and Commit
 
-*Content coming soon.*
+This is where the workflow diagram above comes to life. Here are the exact phrases you can use:
+
+### Creating branches
+
+> *"Create a new branch called feature/clean-postcodes"*
+
+> *"Create a branch from main called analysis/spatial-join-update"*
+
+Claude will run the Git commands for you and confirm the branch has been created and checked out.
+
+### Committing changes
+
+> *"Commit all current changes with the message 'Clean postcode geometries and remove duplicates'"*
+
+> *"Stage just the R scripts and commit with a message about the new cleaning function"*
+
+A few tips for commits:
+
+- **Commit messages should describe the *why*, not just the *what*.** Not "update script" but "Add postcode validation to catch malformed entries".
+- **Commit often.** Small, frequent commits are much easier to review and revert than one massive commit at the end of the day.
+- **Let Claude suggest the message.** Say *"Commit these changes with a meaningful message"* and Claude will draft one based on the diff. You can approve or edit it.
+
+### Pushing and merging
+
+> *"Push this branch to origin"*
+
+> *"Merge this branch into main"*
+
+Claude will warn you if there are uncommitted changes or conflicts. If a merge conflict arises, Claude can often help you resolve it — just describe which version you want to keep.
 
 ## Live Examples {#live-examples}
 
 *Videos and walkthroughs of live coding sessions coming soon.*
+
+This section will include screen recordings and annotated walkthroughs showing real GIS workflows with Claude Code, including:
+
+- Cleaning and validating a national boundary dataset
+- Building an interactive Leaflet map from scratch
+- Debugging a failing spatial join
+- Setting up a new project from an empty folder to a working analysis

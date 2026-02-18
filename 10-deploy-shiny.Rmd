@@ -1,3 +1,92 @@
 # Deploying R Shiny Apps on Posit Connect Cloud
 
-*Content coming soon.*
+If Bookdown is for sharing static documents, Shiny is for sharing *interactive* tools. A Shiny app lets your users explore data, filter maps, adjust parameters, and see results in real time — all through a web browser, with no R installation required on their end.
+
+For GIS work, Shiny is exceptionally powerful. An interactive map dashboard can communicate spatial patterns far more effectively than a static PDF, and it lets non-technical stakeholders engage with your analysis on their own terms.
+
+## What is Shiny?
+
+- **Shiny is an R package** for building interactive web applications directly from R — no HTML, CSS, or JavaScript knowledge required (though Claude can add those if you want to customise).
+- **It's reactive.** When a user changes an input (selects a borough, adjusts a slider, picks a date range), the outputs update automatically.
+- **It integrates with spatial packages.** Leaflet for interactive maps, plotly for interactive charts, DT for searchable data tables — all work seamlessly within Shiny.
+- **Common GIS use cases:**
+  - Interactive map dashboards showing spatial indicators by region
+  - Data explorers that let users filter and download subsets of spatial data
+  - Scenario comparison tools (e.g., "what if we placed a new facility here?")
+  - Monitoring dashboards showing real-time or regularly updated spatial data
+
+## Building a GIS Shiny App with Claude
+
+Claude Code is remarkably effective at building Shiny apps. The combination of UI layout, server logic, and reactive programming is exactly the kind of structured, pattern-based code it handles well.
+
+### Getting started
+
+> *"Create a basic Shiny app that displays a Leaflet map of ward boundaries from data/processed/wards.gpkg, coloured by population density, with a dropdown to select different variables."*
+
+Claude will generate an `app.R` file (or split `ui.R` and `server.R` files) with:
+
+- A sidebar panel with input controls
+- A main panel with the Leaflet map
+- Server logic that reads the data and renders the map reactively
+
+### Adding interactivity
+
+Build up the app's features incrementally:
+
+- **Filtering:** *"Add a dropdown to filter wards by borough name."*
+- **Click events:** *"When the user clicks on a ward, show a popup with the ward name, population, and area."*
+- **Dynamic legends:** *"Update the legend when the user selects a different variable."*
+- **Data tables:** *"Add a data table below the map showing the attributes of the currently visible wards."*
+- **Download buttons:** *"Add a button that lets users download the currently filtered data as a CSV."*
+
+### Styling
+
+> *"Improve the app's appearance — use a clean layout with a navbar, add a title, and make the map fill the full width of the main panel."*
+
+> *"Use the bslib package to apply a modern Bootstrap theme."*
+
+## Testing Locally
+
+Before deploying, always test your app locally:
+
+> *"Run the Shiny app locally so I can test it."*
+
+Claude will run `shiny::runApp()` and tell you the local URL (usually `http://127.0.0.1:XXXX`). Check:
+
+- Does the map render correctly?
+- Do all inputs and filters work as expected?
+- Does it handle edge cases (e.g., filtering to a borough with no data)?
+- Is the performance acceptable with your full dataset?
+
+## Deploying to Posit Connect Cloud
+
+The deployment process is similar to Bookdown:
+
+1. **Make sure `rsconnect` is configured** (see Chapter 9 if you haven't done this yet).
+
+2. **Deploy the app:**
+> *"Deploy this Shiny app to Posit Connect Cloud."*
+
+Claude will run the appropriate `rsconnect::deployApp()` command with your app directory.
+
+3. **Check the deployed version** — open the URL Posit Connect gives you and test it in the browser. Deployed apps sometimes behave slightly differently to local ones (file paths, data access, package availability).
+
+## Common Deployment Issues
+
+A few things that catch people out:
+
+- **File paths.** Your app needs to reference data files using relative paths from the app directory. Absolute paths (`~/projects/...`) will break on the server.
+- **Large datasets.** Posit Connect Cloud has resource limits. If your app loads a massive spatial dataset on startup, it may time out. Consider pre-processing your data to reduce size, or loading it from a URL.
+- **Missing packages.** Every package your app uses needs to be listed. Claude will usually handle this correctly, but check the deployment logs if something fails.
+- **Data updates.** If your data changes regularly, you'll need a strategy for refreshing it — either redeploying the app with new data, or having the app read from an external source.
+
+## Updating Your App
+
+As with Bookdown, updating a deployed Shiny app is straightforward:
+
+- Make your changes locally (on a branch!).
+- Test locally.
+- Redeploy — it updates the same URL.
+- **Ask Claude:** *"Redeploy the Shiny app to Posit Connect Cloud."*
+
+The iterative workflow from Chapter 4 applies here too: branch, develop, test, commit, deploy, merge. Your users always see the latest version at the same URL, and you have full version history through Git.

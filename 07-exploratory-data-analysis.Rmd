@@ -1,3 +1,55 @@
 # Exploratory Data Analysis
 
-*Content coming soon.*
+Once your data is clean, the next step is understanding what you're actually working with. Exploratory Data Analysis (EDA) is the process of summarising, visualising, and probing your data before committing to a formal methodology. For spatial data, this means not just looking at attribute distributions but also examining spatial patterns, clustering, and relationships.
+
+Claude Code is particularly useful here because EDA is inherently iterative — you look at something, ask a question, look again. The speed at which Claude can generate plots and summaries makes this back-and-forth much faster.
+
+## Statistical Summaries
+
+Start every EDA by getting a handle on the basics:
+
+- **Descriptive statistics:** *"Give me a summary of all numeric columns — mean, median, standard deviation, min, max, and count of NAs."*
+- **Distribution checks:** *"Create histograms for all numeric columns, arranged in a grid."*
+- **Categorical summaries:** *"Show me the frequency of each category in the 'land_use' column, sorted by count."*
+- **Correlation matrices:** *"Create a correlation matrix for the numeric variables and visualise it as a heatmap."*
+
+## Spatial Exploration
+
+This is where GIS-specific EDA diverges from standard data science:
+
+- **Quick maps:** *"Plot the boundaries dataset with fill colour based on population density."*
+- **Spatial distribution:** *"Create a map showing the point locations coloured by their classification category."*
+- **Clustering checks:** *"Are these points clustered or evenly distributed? Run a nearest-neighbour analysis."*
+- **Spatial autocorrelation:** *"Calculate Moran's I for the 'median_income' variable using queen contiguity weights."*
+- **Outlier detection:** *"Highlight any polygons where the area is more than 3 standard deviations from the mean."*
+
+## Visualisation with Claude
+
+Claude can generate a wide range of plots. Some particularly useful ones for GIS work:
+
+- **Choropleth maps** — *"Create a choropleth of median house prices by ward, using a sequential colour palette."*
+- **Faceted maps** — *"Show the same boundary dataset faceted by year, so I can see how values changed over time."*
+- **Interactive maps** — *"Create a Leaflet map with popups showing the ward name and population when you click on a polygon."*
+- **Bivariate plots** — *"Create a scatter plot of area vs population with points coloured by region."*
+- **Small multiples** — *"Create a grid of histograms, one per borough, showing the distribution of green space percentage."*
+
+A tip: always tell Claude your preferred visualisation library. *"Use ggplot2 with the viridis colour palette"* or *"Use matplotlib with a clean white background"* saves iteration on styling.
+
+## Structuring Your EDA
+
+A good approach is to work through EDA in a consistent order:
+
+1. **Data overview** — dimensions, column types, first few rows
+2. **Missingness** — where are the gaps?
+3. **Distributions** — what do the values look like?
+4. **Spatial patterns** — where are things concentrated or sparse?
+5. **Relationships** — how do variables relate to each other?
+6. **Outliers** — what doesn't fit the pattern?
+
+Ask Claude to work through these stages one at a time, reviewing each output before moving on. This prevents the common trap of generating 20 plots at once and not actually looking at any of them properly.
+
+## Saving Your EDA Outputs
+
+- **Save plots to the `figures/` directory** — *"Save this plot as figures/population_density_map.png at 300 DPI."*
+- **Generate an EDA report** — *"Write a brief markdown summary of what we've found so far and save it as docs/eda_notes.md."*
+- **Commit your EDA work** — This is part of your analysis pipeline and should be versioned: *"Commit the EDA script and figures with the message 'Add initial exploratory analysis of ward-level data'."*

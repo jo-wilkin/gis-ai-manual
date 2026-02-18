@@ -23,7 +23,7 @@
 <meta name="author" content="Joanna Wilkin" />
 
 
-<meta name="date" content="2026-02-12" />
+<meta name="date" content="2026-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,71 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -105,9 +170,19 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html"><i class="fa fa-check"></i><b>4</b> How to Work with Claude Code</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#good-practices"><i class="fa fa-check"></i><b>4.1</b> Good Practices</a></li>
+<li class="chapter" data-level="4.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#good-practices"><i class="fa fa-check"></i><b>4.1</b> Good Practices</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#your-daily-workflow-a-cheat-sheet"><i class="fa fa-check"></i><b>4.1.1</b> Your Daily Workflow: A Cheat Sheet</a></li>
+<li class="chapter" data-level="4.1.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#step-by-step"><i class="fa fa-check"></i><b>4.1.2</b> Step by step</a></li>
+<li class="chapter" data-level="4.1.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#general-good-practices"><i class="fa fa-check"></i><b>4.1.3</b> General good practices</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#using-git-with-claude"><i class="fa fa-check"></i><b>4.2</b> Using Git with Claude</a></li>
-<li class="chapter" data-level="4.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#getting-claude-to-create-branches-and-commit"><i class="fa fa-check"></i><b>4.3</b> Getting Claude to Create Branches and Commit</a></li>
+<li class="chapter" data-level="4.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#getting-claude-to-create-branches-and-commit"><i class="fa fa-check"></i><b>4.3</b> Getting Claude to Create Branches and Commit</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#creating-branches"><i class="fa fa-check"></i><b>4.3.1</b> Creating branches</a></li>
+<li class="chapter" data-level="4.3.2" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#committing-changes"><i class="fa fa-check"></i><b>4.3.2</b> Committing changes</a></li>
+<li class="chapter" data-level="4.3.3" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#pushing-and-merging"><i class="fa fa-check"></i><b>4.3.3</b> Pushing and merging</a></li>
+</ul></li>
 <li class="chapter" data-level="4.4" data-path="how-to-work-with-claude-code.html"><a href="how-to-work-with-claude-code.html#live-examples"><i class="fa fa-check"></i><b>4.4</b> Live Examples</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html"><i class="fa fa-check"></i><b>5</b> Limitations and Considerations</a>
@@ -118,12 +193,62 @@
 <li class="chapter" data-level="5.4" data-path="limitations-and-considerations.html"><a href="limitations-and-considerations.html#responsible-use"><i class="fa fa-check"></i><b>5.4</b> Responsible Use</a></li>
 </ul></li>
 <li class="part"><span><b>II Doing GIS with Claude Code</b></span></li>
-<li class="chapter" data-level="6" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html"><i class="fa fa-check"></i><b>6</b> Data Cleaning and Quality Assurance</a></li>
-<li class="chapter" data-level="7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>7</b> Exploratory Data Analysis</a></li>
-<li class="chapter" data-level="8" data-path="methodology-development.html"><a href="methodology-development.html"><i class="fa fa-check"></i><b>8</b> Methodology Development</a></li>
+<li class="chapter" data-level="6" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html"><i class="fa fa-check"></i><b>6</b> Data Cleaning and Quality Assurance</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#why-this-chapter-matters"><i class="fa fa-check"></i><b>6.1</b> Why This Chapter Matters</a></li>
+<li class="chapter" data-level="6.2" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#common-gis-data-cleaning-tasks"><i class="fa fa-check"></i><b>6.2</b> Common GIS Data Cleaning Tasks</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#geometry-validation-and-repair"><i class="fa fa-check"></i><b>6.2.1</b> Geometry validation and repair</a></li>
+<li class="chapter" data-level="6.2.2" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#crs-management"><i class="fa fa-check"></i><b>6.2.2</b> CRS management</a></li>
+<li class="chapter" data-level="6.2.3" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#attribute-cleaning"><i class="fa fa-check"></i><b>6.2.3</b> Attribute cleaning</a></li>
+<li class="chapter" data-level="6.2.4" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#joins-and-merges"><i class="fa fa-check"></i><b>6.2.4</b> Joins and merges</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#building-a-qa-checklist"><i class="fa fa-check"></i><b>6.3</b> Building a QA Checklist</a></li>
+<li class="chapter" data-level="6.4" data-path="data-cleaning-and-quality-assurance.html"><a href="data-cleaning-and-quality-assurance.html#things-to-watch-out-for"><i class="fa fa-check"></i><b>6.4</b> Things to Watch Out For</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>7</b> Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#statistical-summaries"><i class="fa fa-check"></i><b>7.1</b> Statistical Summaries</a></li>
+<li class="chapter" data-level="7.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#spatial-exploration"><i class="fa fa-check"></i><b>7.2</b> Spatial Exploration</a></li>
+<li class="chapter" data-level="7.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualisation-with-claude"><i class="fa fa-check"></i><b>7.3</b> Visualisation with Claude</a></li>
+<li class="chapter" data-level="7.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#structuring-your-eda"><i class="fa fa-check"></i><b>7.4</b> Structuring Your EDA</a></li>
+<li class="chapter" data-level="7.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#saving-your-eda-outputs"><i class="fa fa-check"></i><b>7.5</b> Saving Your EDA Outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="methodology-development.html"><a href="methodology-development.html"><i class="fa fa-check"></i><b>8</b> Methodology Development</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="methodology-development.html"><a href="methodology-development.html#using-claude-as-a-sounding-board"><i class="fa fa-check"></i><b>8.1</b> Using Claude as a Sounding Board</a></li>
+<li class="chapter" data-level="8.2" data-path="methodology-development.html"><a href="methodology-development.html#implementing-your-analysis"><i class="fa fa-check"></i><b>8.2</b> Implementing Your Analysis</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="methodology-development.html"><a href="methodology-development.html#spatial-analysis-workflows"><i class="fa fa-check"></i><b>8.2.1</b> Spatial analysis workflows</a></li>
+<li class="chapter" data-level="8.2.2" data-path="methodology-development.html"><a href="methodology-development.html#statistical-methods"><i class="fa fa-check"></i><b>8.2.2</b> Statistical methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="methodology-development.html"><a href="methodology-development.html#iterating-on-your-methodology"><i class="fa fa-check"></i><b>8.3</b> Iterating on Your Methodology</a></li>
+<li class="chapter" data-level="8.4" data-path="methodology-development.html"><a href="methodology-development.html#documenting-your-methodology"><i class="fa fa-check"></i><b>8.4</b> Documenting Your Methodology</a></li>
+</ul></li>
 <li class="part"><span><b>III Deploying GIS Products with Claude Code</b></span></li>
-<li class="chapter" data-level="9" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>9</b> Deploying R Bookdown on Posit Connect Cloud</a></li>
-<li class="chapter" data-level="10" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>10</b> Deploying R Shiny Apps on Posit Connect Cloud</a></li>
+<li class="chapter" data-level="9" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>9</b> Deploying R Bookdown on Posit Connect Cloud</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#what-is-bookdown"><i class="fa fa-check"></i><b>9.1</b> What is Bookdown?</a></li>
+<li class="chapter" data-level="9.2" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#what-is-posit-connect-cloud"><i class="fa fa-check"></i><b>9.2</b> What is Posit Connect Cloud?</a></li>
+<li class="chapter" data-level="9.3" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#setting-up-a-bookdown-project-with-claude"><i class="fa fa-check"></i><b>9.3</b> Setting Up a Bookdown Project with Claude</a></li>
+<li class="chapter" data-level="9.4" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#building-locally"><i class="fa fa-check"></i><b>9.4</b> Building Locally</a></li>
+<li class="chapter" data-level="9.5" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#deploying-to-posit-connect-cloud"><i class="fa fa-check"></i><b>9.5</b> Deploying to Posit Connect Cloud</a></li>
+<li class="chapter" data-level="9.6" data-path="deploying-r-bookdown-on-posit-connect-cloud.html"><a href="deploying-r-bookdown-on-posit-connect-cloud.html#updating-your-deployed-document"><i class="fa fa-check"></i><b>9.6</b> Updating Your Deployed Document</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html"><i class="fa fa-check"></i><b>10</b> Deploying R Shiny Apps on Posit Connect Cloud</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#what-is-shiny"><i class="fa fa-check"></i><b>10.1</b> What is Shiny?</a></li>
+<li class="chapter" data-level="10.2" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#building-a-gis-shiny-app-with-claude"><i class="fa fa-check"></i><b>10.2</b> Building a GIS Shiny App with Claude</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#getting-started"><i class="fa fa-check"></i><b>10.2.1</b> Getting started</a></li>
+<li class="chapter" data-level="10.2.2" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#adding-interactivity"><i class="fa fa-check"></i><b>10.2.2</b> Adding interactivity</a></li>
+<li class="chapter" data-level="10.2.3" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#styling"><i class="fa fa-check"></i><b>10.2.3</b> Styling</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#testing-locally"><i class="fa fa-check"></i><b>10.3</b> Testing Locally</a></li>
+<li class="chapter" data-level="10.4" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#deploying-to-posit-connect-cloud-1"><i class="fa fa-check"></i><b>10.4</b> Deploying to Posit Connect Cloud</a></li>
+<li class="chapter" data-level="10.5" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#common-deployment-issues"><i class="fa fa-check"></i><b>10.5</b> Common Deployment Issues</a></li>
+<li class="chapter" data-level="10.6" data-path="deploying-r-shiny-apps-on-posit-connect-cloud.html"><a href="deploying-r-shiny-apps-on-posit-connect-cloud.html#updating-your-app"><i class="fa fa-check"></i><b>10.6</b> Updating Your App</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/jo-wilkin/gis-ai-manual" target="_blank">Source Code</a></li>
 
@@ -146,21 +271,186 @@
             <section class="normal" id="section-">
 <div id="how-to-work-with-claude-code" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> How to Work with Claude Code<a href="how-to-work-with-claude-code.html#how-to-work-with-claude-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This is the chapter you’ll probably come back to most often. It covers the day-to-day practices that make the difference between a frustrating session and a productive one — including a workflow you can follow every single morning.</p>
 <div id="good-practices" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Good Practices<a href="how-to-work-with-claude-code.html#good-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<div id="your-daily-workflow-a-cheat-sheet" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Your Daily Workflow: A Cheat Sheet<a href="how-to-work-with-claude-code.html#your-daily-workflow-a-cheat-sheet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Before we get into the detail, here’s the workflow we recommend every time you sit down to work with Claude Code. Think of it as your morning routine — once it becomes habit, you won’t think twice about it.</p>
+<p><em>Your daily workflow with Claude Code. Start each session by creating a branch, do your work in small committed chunks, and merge when you’re happy.</em></p>
+<pre><code> ┌─────────────────────────────┐
+ │  Open terminal in your      │
+ │  project folder             │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Launch Claude Code         │
+ │  (type: claude)             │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Create a new branch        │
+ │  &quot;Create a branch called    │
+ │   feature/clean-boundaries&quot; │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Do your work               │◄──────────┐
+ │  in small steps             │           │
+ └──────────────┬──────────────┘           │
+                │                          │
+                ▼                          │
+ ┌─────────────────────────────┐           │
+ │  Review changes             │           │
+ │  &quot;Show me a git diff&quot;       │           │
+ └──────────────┬──────────────┘           │
+                │                          │
+                ▼                          │
+ ┌─────────────────────────────┐           │
+ │  Commit frequently          │           │
+ │  &quot;Commit this with a        │           │
+ │   meaningful message&quot;       │           │
+ └──────────────┬──────────────┘           │
+                │                          │
+                ▼                          │
+           ┌─────────┐    Yes              │
+           │  More   ├────────────────────┘
+           │  work?  │
+           └────┬────┘
+                │ No
+                ▼
+ ┌─────────────────────────────┐
+ │  Push your branch           │
+ │  &quot;Push this branch          │
+ │   to origin&quot;                │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  Open a pull request        │
+ │  or merge locally           │
+ └──────────────┬──────────────┘
+                │
+                ▼
+ ┌─────────────────────────────┐
+ │  ✓  Done for the day        │
+ └─────────────────────────────┘</code></pre>
+<p><strong>The golden rule: never work directly on <code>main</code>.</strong> Always create a branch, do your work there, and merge back when you’re satisfied. This way, if Claude leads you down a path you don’t like, you can simply delete the branch and start fresh. No harm done.</p>
+</div>
+<div id="step-by-step" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Step by step<a href="how-to-work-with-claude-code.html#step-by-step" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here’s what each stage looks like in practice:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Open your terminal and navigate to your project folder:</strong></li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="how-to-work-with-claude-code.html#cb11-1" tabindex="-1"></a><span class="bu">cd</span> ~/projects/my-gis-project</span>
+<span id="cb11-2"><a href="how-to-work-with-claude-code.html#cb11-2" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p><strong>Create a branch for today’s work.</strong> Tell Claude:
+&gt; <em>“Create a new branch called feature/add-boundary-cleaning”</em></p></li>
+<li><p><strong>Work in small, reviewable chunks.</strong> Instead of asking Claude to write an entire pipeline, ask for one step at a time:
+&gt; <em>“Read in the boundary shapefile from data/raw/ and check for invalid geometries”</em></p></li>
+<li><p><strong>Review what Claude has done.</strong> After each step, ask:
+&gt; <em>“Show me a git diff of what’s changed”</em></p></li>
+<li><p><strong>Commit when you’re happy with a piece of work:</strong>
+&gt; <em>“Commit these changes with the message ‘Add boundary geometry validation’”</em></p></li>
+<li><p><strong>Repeat steps 3–5</strong> until you’ve finished your task for the day.</p></li>
+<li><p><strong>Push your branch</strong> when you’re done:
+&gt; <em>“Push this branch to origin”</em></p></li>
+<li><p><strong>Merge or open a pull request</strong> once you’re confident the work is complete.</p></li>
+</ol>
+</div>
+<div id="general-good-practices" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> General good practices<a href="how-to-work-with-claude-code.html#general-good-practices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Beyond the daily workflow, keep these principles in mind:</p>
+<ul>
+<li><strong>Start each session with context.</strong> Remind Claude what you’re working on: <em>“I’m continuing work on the land use classification analysis. We’re in the feature/land-use branch.”</em></li>
+<li><strong>Use <code>CLAUDE.md</code> for persistent context.</strong> Put your project preferences, data descriptions, and coding standards in a <code>CLAUDE.md</code> file at the root of your project. Claude reads this automatically at the start of every session. Example:</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="how-to-work-with-claude-code.html#cb12-1" tabindex="-1"></a><span class="fu"># Project: London Green Space Analysis</span></span>
+<span id="cb12-2"><a href="how-to-work-with-claude-code.html#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="how-to-work-with-claude-code.html#cb12-3" tabindex="-1"></a><span class="fu">## Language &amp; packages</span></span>
+<span id="cb12-4"><a href="how-to-work-with-claude-code.html#cb12-4" tabindex="-1"></a><span class="ss">- </span>R with sf, dplyr, ggplot2, terra</span>
+<span id="cb12-5"><a href="how-to-work-with-claude-code.html#cb12-5" tabindex="-1"></a><span class="ss">- </span>Always use pipe operator |&gt;</span>
+<span id="cb12-6"><a href="how-to-work-with-claude-code.html#cb12-6" tabindex="-1"></a><span class="ss">- </span>Use British English in comments</span>
+<span id="cb12-7"><a href="how-to-work-with-claude-code.html#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="how-to-work-with-claude-code.html#cb12-8" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb12-9"><a href="how-to-work-with-claude-code.html#cb12-9" tabindex="-1"></a><span class="ss">- </span>Raw data in data/raw/ (do not modify)</span>
+<span id="cb12-10"><a href="how-to-work-with-claude-code.html#cb12-10" tabindex="-1"></a><span class="ss">- </span>All outputs go to data/output/</span>
+<span id="cb12-11"><a href="how-to-work-with-claude-code.html#cb12-11" tabindex="-1"></a><span class="ss">- </span>CRS: EPSG:27700 (British National Grid)</span>
+<span id="cb12-12"><a href="how-to-work-with-claude-code.html#cb12-12" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="how-to-work-with-claude-code.html#cb12-13" tabindex="-1"></a><span class="fu">## Conventions</span></span>
+<span id="cb12-14"><a href="how-to-work-with-claude-code.html#cb12-14" tabindex="-1"></a><span class="ss">- </span>Script names: 01-clean.R, 02-analyse.R, etc.</span>
+<span id="cb12-15"><a href="how-to-work-with-claude-code.html#cb12-15" tabindex="-1"></a><span class="ss">- </span>Always include a header comment in scripts</span></code></pre></div>
+<ul>
+<li><strong>Ask Claude to explain its choices.</strong> If it suggests an approach you’re not familiar with, ask <em>“Why did you use st_make_valid() here instead of st_buffer(0)?”</em> You’ll learn faster this way.</li>
+<li><strong>Don’t let sessions run too long.</strong> Claude Code sessions accumulate context. If you’ve been working for a while and responses start feeling less sharp, start a fresh session.</li>
+</ul>
+</div>
 </div>
 <div id="using-git-with-claude" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Using Git with Claude<a href="how-to-work-with-claude-code.html#using-git-with-claude" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<p>Claude Code has built-in awareness of Git. You don’t need to switch to a separate terminal for version control — Claude can handle it directly.</p>
+<ul>
+<li><strong>Checking status:</strong> Ask <em>“What’s the current git status?”</em> and Claude will show you tracked, untracked, and modified files.</li>
+<li><strong>Viewing changes:</strong> <em>“Show me the diff”</em> gives you a clear view of what’s changed since the last commit.</li>
+<li><strong>Switching branches:</strong> <em>“Switch to the main branch”</em> or <em>“Checkout the feature/analysis branch”</em>.</li>
+<li><strong>Viewing history:</strong> <em>“Show me the last 5 commits”</em> to understand where you left off.</li>
+</ul>
+<p>The advantage of doing Git through Claude is that it can <em>explain</em> what it sees. Instead of parsing a raw diff yourself, you can ask: <em>“Summarise the changes I’ve made since the last commit”</em> and get a plain-English description.</p>
 </div>
 <div id="getting-claude-to-create-branches-and-commit" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Getting Claude to Create Branches and Commit<a href="how-to-work-with-claude-code.html#getting-claude-to-create-branches-and-commit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Content coming soon.</em></p>
+<p>This is where the workflow diagram above comes to life. Here are the exact phrases you can use:</p>
+<div id="creating-branches" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Creating branches<a href="how-to-work-with-claude-code.html#creating-branches" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p><em>“Create a new branch called feature/clean-postcodes”</em></p>
+</blockquote>
+<blockquote>
+<p><em>“Create a branch from main called analysis/spatial-join-update”</em></p>
+</blockquote>
+<p>Claude will run the Git commands for you and confirm the branch has been created and checked out.</p>
+</div>
+<div id="committing-changes" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Committing changes<a href="how-to-work-with-claude-code.html#committing-changes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p><em>“Commit all current changes with the message ‘Clean postcode geometries and remove duplicates’”</em></p>
+</blockquote>
+<blockquote>
+<p><em>“Stage just the R scripts and commit with a message about the new cleaning function”</em></p>
+</blockquote>
+<p>A few tips for commits:</p>
+<ul>
+<li><strong>Commit messages should describe the <em>why</em>, not just the <em>what</em>.</strong> Not “update script” but “Add postcode validation to catch malformed entries”.</li>
+<li><strong>Commit often.</strong> Small, frequent commits are much easier to review and revert than one massive commit at the end of the day.</li>
+<li><strong>Let Claude suggest the message.</strong> Say <em>“Commit these changes with a meaningful message”</em> and Claude will draft one based on the diff. You can approve or edit it.</li>
+</ul>
+</div>
+<div id="pushing-and-merging" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Pushing and merging<a href="how-to-work-with-claude-code.html#pushing-and-merging" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p><em>“Push this branch to origin”</em></p>
+</blockquote>
+<blockquote>
+<p><em>“Merge this branch into main”</em></p>
+</blockquote>
+<p>Claude will warn you if there are uncommitted changes or conflicts. If a merge conflict arises, Claude can often help you resolve it — just describe which version you want to keep.</p>
+</div>
 </div>
 <div id="live-examples" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Live Examples<a href="how-to-work-with-claude-code.html#live-examples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Videos and walkthroughs of live coding sessions coming soon.</em></p>
+<p>This section will include screen recordings and annotated walkthroughs showing real GIS workflows with Claude Code, including:</p>
+<ul>
+<li>Cleaning and validating a national boundary dataset</li>
+<li>Building an interactive Leaflet map from scratch</li>
+<li>Debugging a failing spatial join</li>
+<li>Setting up a new project from an empty folder to a working analysis</li>
+</ul>
 
 </div>
 </div>

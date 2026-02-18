@@ -1,20 +1,53 @@
 # Getting Started with Claude
 
+This chapter walks you through everything you need to get Claude Code installed and configured on your machine. If you've ever set up a new GIS software environment, you'll know the drill — a bit of upfront effort that saves enormous time later. We'll take it step by step.
+
 ## Downloading Claude Code
 
-*Content coming soon.*
+Claude Code is a command-line tool that runs in your terminal. It's not a desktop application with a GUI — it lives in the same terminal you might already use for running R scripts or git commands.
+
+- **You'll need Node.js installed first.** Claude Code runs on Node.js (version 18 or above). If you don't have it, download it from [nodejs.org](https://nodejs.org/).
+- **Install Claude Code via npm.** Open your terminal and run:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+- **Verify the installation** by typing `claude` in your terminal. You should see the Claude Code interface appear.
+- **Updates happen regularly.** Claude Code is actively developed. Run `npm update -g @anthropic-ai/claude-code` periodically to stay current.
+
+If you're on a managed work machine and can't install global npm packages, speak to your IT team — they may need to whitelist the package or provide an alternative installation path.
 
 ## Setting Up an Account
 
-*Content coming soon.*
+- **You'll need an Anthropic account** — or your organisation may provide access through a team plan. Claude Code authenticates through your browser.
+- **On first launch**, Claude Code will open a browser window for you to log in. Once authenticated, the token is stored locally so you won't need to log in every time.
+- **Check your plan.** Claude Code usage depends on your subscription. The Pro plan is sufficient for individual use; teams may want the Team or Enterprise plan for shared billing and usage limits.
+- **API usage is metered.** Unlike the chat interface at claude.ai, Claude Code consumes API credits. Keep an eye on your usage dashboard, especially during heavy sessions.
 
 ## Choosing a Program
 
-*Content coming soon.*
+Claude Code is language-agnostic — it can write R, Python, JavaScript, SQL, and more. But your *working environment* matters:
+
+- **If you're an R user**, you'll likely want RStudio or VS Code open alongside your terminal. Claude writes the code; you run and inspect it in your IDE.
+- **If you're a Python user**, VS Code with a Jupyter extension, or a standalone Jupyter notebook, works well alongside Claude Code.
+- **If you work in QGIS or ArcGIS Pro**, Claude Code can help you write PyQGIS or ArcPy scripts, processing scripts, and even generate model builder configurations — but you'll still run them inside your GIS software.
+- **Terminal setup matters.** Claude Code runs best in a modern terminal — the default macOS Terminal, iTerm2, Windows Terminal, or the integrated terminal in VS Code all work well.
+
+The key principle: Claude Code is your *writing* environment. Your IDE or GIS software is your *execution and inspection* environment. Keep both open side by side.
 
 ## Setting Up Folders for Claude
 
-*Content coming soon.*
+Before you start a session, think about where Claude will be working. Claude Code operates from whatever directory you launch it in, and it can read and write files relative to that location.
+
+- **One project, one folder.** Launch Claude Code from the root of your project directory — the same folder where your `.Rproj` file, `environment.yml`, or main script lives.
+- **Keep your data organised.** A clear folder structure means Claude can find your inputs and put outputs in the right place without you having to specify full paths every time.
+- **Don't launch Claude from your home directory.** This gives it access to far more than it needs. Always navigate to your project folder first:
+
+```bash
+cd ~/projects/my-gis-analysis
+claude
+```
 
 ## Restricting Claude to Those Folders {#restricting-folders}
 
@@ -22,12 +55,54 @@
 **Why is this important?** Claude Code has access to read and modify files on your system. Restricting it to specific project folders prevents accidental changes to files outside your project. This is one of the most important setup steps.
 :::
 
-*Content coming soon.*
+This is arguably the single most important configuration step. Claude Code can read and write files — and you want to make sure it's only touching your project.
+
+- **Use the permission system.** When Claude tries to access files or run commands, it will ask for your approval. Pay attention to these prompts, especially in your first few sessions.
+- **Set directory restrictions** in your Claude Code settings to limit file access to your project directory. This prevents Claude from accidentally reading or modifying files elsewhere on your machine.
+- **Be especially careful with:**
+  - System configuration files
+  - `.env` files containing API keys or credentials
+  - Shared network drives
+  - Directories containing sensitive or personal data
+- **When in doubt, deny.** If Claude asks to access something you don't recognise, say no. You can always grant access later once you understand why it's needed.
+
+For GIS analysts, this is particularly relevant because we often work with data on shared drives or in complex directory structures. Take the time to set this up properly.
 
 ## Why a Folder Structure Template is a Good Idea
 
-*Content coming soon.*
+If you've worked on enough GIS projects, you know how quickly things descend into chaos without a consistent structure. Files named `final_v2_ACTUALLY_FINAL.shp` shouldn't haunt your projects.
+
+A consistent folder template helps Claude Code work more effectively because it can predict where things live. Here's a structure that works well for GIS projects:
+
+```
+my-project/
+├── CLAUDE.md           # Instructions for Claude Code
+├── README.md           # Project description
+├── data/
+│   ├── raw/            # Original, untouched data
+│   ├── processed/      # Cleaned and transformed data
+│   └── output/         # Analysis outputs
+├── scripts/
+│   ├── 01-clean.R      # Data cleaning
+│   ├── 02-analyse.R    # Analysis
+│   └── 03-visualise.R  # Visualisation
+├── figures/            # Maps and plots
+└── docs/               # Documentation and metadata
+```
+
+- **Numbered scripts** make the workflow order obvious — both to you and to Claude.
+- **Separating raw from processed data** protects your originals and makes the pipeline reproducible.
+- **The `CLAUDE.md` file** at the root is where you store project-specific instructions for Claude (we'll cover this properly in Chapter 4).
+
+You don't have to use this exact structure, but pick one and stick with it across projects. Consistency is the point.
 
 ## Setting Up Your Window
 
-*Content coming soon.*
+How you arrange your screen might sound trivial, but it makes a real difference to your workflow:
+
+- **Side by side.** Put your terminal (running Claude Code) on one side of the screen and your IDE or GIS software on the other. You'll be switching between them constantly.
+- **If you have two monitors**, dedicate one to Claude Code and your terminal, and the other to your IDE/GIS.
+- **Keep a file browser visible.** Whether it's your OS file manager or the file panel in VS Code, being able to see what files Claude is creating or modifying in real time is reassuring.
+- **Consider using VS Code's integrated terminal.** This lets you run Claude Code in the same window as your code editor, with the file tree visible in the sidebar. Many GIS analysts find this the most efficient setup.
+
+The goal is to minimise friction. You want to see what Claude is doing, review its output, and run the results — all without constantly resizing and switching windows.

@@ -2,18 +2,48 @@
 
 # Introduction
 
+If you've spent your career working in ArcGIS Pro, QGIS, or writing R and Python scripts for spatial analysis, the idea of an AI "coding assistant" might feel either exciting or slightly unnerving. This chapter sets the scene — what vibe coding actually is, why it's relevant to GIS professionals, and some honest reflections on where it helps and where it doesn't.
+
 ## What is Vibe Coding?
 
-*Content coming soon.*
+The term "vibe coding" was coined by Andrej Karpathy in early 2025 to describe a way of programming where you describe *what you want* in natural language, and an AI assistant writes the code for you. You guide the direction; the AI handles the syntax.
+
+- **It's a conversation, not a command line.** You describe your goal — "read in this shapefile and reproject it to British National Grid" — and Claude writes the code.
+- **You don't need to memorise functions.** If you've ever spent 20 minutes googling the exact `sf::st_transform()` syntax or the right EPSG code, vibe coding shortcuts that entirely.
+- **You stay in control.** Claude proposes changes; you review and approve them. Nothing runs without your say-so.
+- **It's not magic.** Claude is generating code based on patterns it's learned. It can make mistakes, hallucinate package names, or suggest approaches that don't suit your data. Your domain expertise is what keeps things on track.
+
+Think of it less like handing your work to a junior analyst and more like pair programming with a very well-read colleague who types fast but sometimes needs correcting.
 
 ## How Can We Use Vibe Coding in GIS?
 
-*Content coming soon.*
+GIS work is particularly well-suited to AI-assisted coding because so much of what we do follows repeatable patterns — load data, clean it, transform it, analyse it, visualise it. Here are some of the ways Claude Code can accelerate your spatial workflows:
+
+- **Data wrangling at speed.** Cleaning attribute tables, joining datasets, handling CRS mismatches, converting between formats — Claude can generate these scripts in seconds.
+- **Rapid prototyping.** Need a quick Leaflet map to check your output? A ggplot to visualise a distribution? Claude can scaffold these without you having to look up the syntax every time.
+- **Automating the tedious.** Batch processing hundreds of files, renaming columns to a consistent schema, writing QA checks — the tasks that eat hours of your week.
+- **Learning new tools.** If you're an R user curious about Python (or vice versa), Claude can translate your familiar workflows into a new language and explain the differences.
+- **Documentation as you go.** Claude can generate README files, comment your code, and even write metadata — the things we all know we *should* do but rarely find time for.
 
 ## Tips and Tricks
 
-*Content coming soon.*
+A few things we've learned from using Claude Code day-to-day on GIS projects:
+
+- **Be specific about your data.** Instead of "clean this data", say "remove rows where the geometry is empty and drop columns that are entirely NA". The more precise your prompt, the better the output.
+- **Tell Claude what language and packages you prefer.** Start your session with something like: *"I'm working in R with sf, dplyr, and ggplot2. My data is in GeoPackage format."*
+- **Work in small steps.** Don't ask Claude to build an entire analysis pipeline in one go. Break it into stages — load, clean, analyse, visualise — and check each one.
+- **Use `CLAUDE.md` files.** These are project-level instruction files that Claude reads at the start of every session. Use them to store your preferences, folder structure, and any project-specific context (more on this in Chapter 4).
+- **Read what Claude writes.** It's tempting to just approve everything, but you'll learn more and catch mistakes faster if you actually read the code before accepting it.
+- **Don't be afraid to say "no".** If Claude suggests an approach you don't like, just tell it. *"Actually, let's use terra instead of raster for this."* It will adapt.
 
 ## Limitations
 
-*Content coming soon.*
+It's important to go in with realistic expectations. Claude Code is a powerful tool, but it's not a replacement for your expertise:
+
+- **It doesn't understand your data.** Claude can process structures and schemas, but it doesn't *know* that your land use classification has a specific local meaning, or that certain boundary codes changed in 2021.
+- **Spatial operations can trip it up.** Complex geoprocessing chains — especially those involving topology, network analysis, or raster algebra — sometimes produce code that looks right but gives wrong results. Always validate.
+- **Large datasets need care.** Claude may suggest in-memory approaches that work fine on a sample but fail on your full 2 million-row dataset. Be upfront about data size.
+- **It's not a GIS.** Claude Code doesn't render maps or display spatial data interactively. You'll still need your GIS software or R/Python environment to view outputs.
+- **Reproducibility is your responsibility.** Claude can help you write reproducible code, but you need to manage the versioning, environment, and data provenance yourself — which is exactly why we cover Git in Chapter 3.
+
+We'll return to limitations in more detail in Chapter 5. For now, the key takeaway is: *Claude Code is a brilliant accelerator when paired with your domain knowledge. It's not a substitute for it.*

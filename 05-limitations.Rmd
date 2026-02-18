@@ -1,17 +1,53 @@
 # Limitations and Considerations
 
+We touched on limitations briefly in Chapter 1, but this chapter goes deeper. Understanding where Claude Code excels and where it falls short will save you time, frustration, and — importantly — help you avoid producing incorrect results. Honest reflection on these tools is part of using them responsibly.
+
 ## What Claude Code Does Well
 
-*Content coming soon.*
+Let's start with the positives. Claude Code genuinely accelerates GIS work in these areas:
+
+- **Boilerplate code.** Loading libraries, reading data, setting up project structures, writing standard cleaning pipelines — Claude does this faster than you can type it.
+- **Translating between languages.** Need your R workflow in Python, or vice versa? Claude handles these translations well, preserving the logic while adapting to language-specific conventions.
+- **Explaining code.** Inherited a colleague's undocumented script? Paste it in and ask Claude to explain what each section does. This is one of its strongest use cases.
+- **Debugging.** Paste an error message and the relevant code, and Claude will often identify the issue and suggest a fix immediately.
+- **Writing documentation.** README files, code comments, function docstrings, metadata templates — Claude produces these quickly and consistently.
+- **Repetitive transformations.** Renaming columns across multiple datasets, standardising date formats, converting CRS for a batch of files — tedious work that Claude handles reliably.
+- **Generating visualisations.** Quick exploratory plots, ggplot2 themes, Leaflet maps — Claude can scaffold these rapidly, letting you focus on interpretation rather than syntax.
 
 ## Where Claude Code Struggles
 
-*Content coming soon.*
+These are the areas where you need to be most vigilant:
+
+- **Domain-specific spatial logic.** Claude doesn't understand *why* you'd use a 50-metre buffer versus a 100-metre buffer, or why a particular spatial join needs to be a left join. It can write the code, but the analytical decisions are yours.
+- **Complex geoprocessing chains.** Operations that involve multiple sequential spatial transformations — dissolve, then buffer, then intersect, then aggregate — sometimes produce subtly wrong results. Always validate the output geometry.
+- **CRS and projection issues.** Claude generally knows common EPSG codes, but it can get confused with less common or custom projections. Always verify that transformations are correct.
+- **Large raster operations.** Claude may suggest approaches that load entire rasters into memory. For large Earth observation datasets, you'll need to guide it toward tile-based or out-of-core processing.
+- **Topology and network analysis.** These are areas where spatial relationships are complex and errors are hard to spot visually. Extra validation is essential.
+- **Keeping up with package changes.** Claude's training data has a cutoff. If a package has recently changed its API (as `terra` and `sf` occasionally do), Claude may suggest deprecated syntax.
+- **Understanding your specific data.** Claude doesn't know that ward boundaries changed in the 2023 revision, or that your organisation uses a custom classification scheme. You need to provide this context explicitly.
 
 ## Environmental Costs of AI
 
-*Content coming soon.*
+It would be irresponsible to write a guide encouraging AI use without acknowledging the environmental footprint:
+
+- **AI models require significant energy to run.** Each query to Claude Code consumes computational resources in data centres powered by electricity.
+- **The scale matters.** A single query is negligible, but heavy daily use across thousands of users adds up. This is an active area of concern and research in the AI industry.
+- **How to think about it practically:**
+  - Use Claude Code purposefully, not as a chatbot. Have a clear task before you start a session.
+  - Avoid repetitive, unnecessary queries. If Claude gave you a good answer, save it rather than asking again.
+  - Batch your work. Rather than starting and stopping sessions throughout the day, consolidate your Claude Code work into focused blocks.
+- **Context for GIS professionals.** Many of us already work with computationally intensive processes — running spatial models, processing satellite imagery, rendering 3D visualisations. AI-assisted coding is an additional energy cost, but it may also *reduce* total computation by helping you write more efficient code on the first attempt.
+- **Stay informed.** Anthropic (the company behind Claude) publishes information about their sustainability efforts. As the field evolves, the energy efficiency of these models is improving.
+
+This isn't a reason to avoid using Claude Code, but it is a reason to use it thoughtfully.
 
 ## Responsible Use
 
-*Content coming soon.*
+Using AI in your professional work comes with responsibilities beyond the technical:
+
+- **Don't present AI-generated code as entirely your own work** in contexts where that matters (academic submissions, certifications, job interviews). Be transparent about your tools.
+- **Validate outputs.** This applies to any tool, but it's especially important with AI. If Claude writes an analysis that produces a number, check that number against your expectations and, where possible, against an independent calculation.
+- **Be careful with sensitive data.** Claude Code processes your prompts and code. Don't paste confidential data, personal information, or sensitive organisational details into your prompts unless your organisation's data policy permits it.
+- **Credit appropriately.** If Claude Code significantly contributed to a piece of work — particularly in research or published outputs — consider acknowledging it, just as you would any other tool or collaborator.
+- **Maintain your skills.** It's tempting to let Claude do everything, but actively understanding the code it produces will keep your skills sharp. Use Claude as a learning tool, not a crutch.
+- **Stay critical.** Just because Claude says something confidently doesn't mean it's correct. This applies to code, explanations, and especially to statistical or methodological advice. Your training and experience are the final quality check.
