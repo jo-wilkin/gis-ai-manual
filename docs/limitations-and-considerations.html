@@ -20,10 +20,10 @@
   <meta name="twitter:description" content="A practical guide for GIS analysts getting started with AI-assisted coding using Claude Code." />
   
 
-<meta name="author" content="Joanna Wilkin" />
+<meta name="author" content="Dr Jo Wilkin &amp; Claude" />
 
 
-<meta name="date" content="2026-02-17" />
+<meta name="date" content="2026-02-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,6 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Topology and network analysis.</strong> These are areas where spatial relationships are complex and errors are hard to spot visually. Extra validation is essential.</li>
 <li><strong>Keeping up with package changes.</strong> Claude’s training data has a cutoff. If a package has recently changed its API (as <code>terra</code> and <code>sf</code> occasionally do), Claude may suggest deprecated syntax.</li>
 <li><strong>Understanding your specific data.</strong> Claude doesn’t know that ward boundaries changed in the 2023 revision, or that your organisation uses a custom classification scheme. You need to provide this context explicitly.</li>
+<li><strong>Making maps.</strong> Claude Code can help you <em>code</em> maps in R or Python — Leaflet, ggplot2, matplotlib — but it shouldn’t be your map-making tool. For anything that requires careful cartographic design, detailed symbology, or presentation-quality output, you should be using dedicated GIS software such as QGIS or ArcGIS. I still use GUI-based GIS for all my map production, and I’d recommend you do the same. Code-generated maps are great for quick exploration; published maps deserve proper cartographic tools.</li>
 </ul>
 </div>
 <div id="environmental-costs-of-ai" class="section level2 hasAnchor" number="5.3">
